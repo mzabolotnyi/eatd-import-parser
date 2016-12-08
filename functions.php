@@ -7,27 +7,27 @@
  */
 
 /*
- * Ñ÷èòûâàåò äàííûå èç ëþáîãî excel ôàéëà è ñîçàäåò èç íèõ ìàññèâ.
- * $filename (ñòðîêà) ïóòü ê ôàéëó îò êîðíÿ ñåðâåðà
+ * Ð¡Ñ‡Ð¸Ñ‚Ñ‹Ð²Ð°ÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð· Ð»ÑŽÐ±Ð¾Ð³Ð¾ excel Ñ„Ð°Ð¹Ð»Ð° Ð¸ ÑÐ¾Ð·Ð°Ð´ÐµÑ‚ Ð¸Ð· Ð½Ð¸Ñ… Ð¼Ð°ÑÑÐ¸Ð².
+ * $filename (ÑÑ‚Ñ€Ð¾ÐºÐ°) Ð¿ÑƒÑ‚ÑŒ Ðº Ñ„Ð°Ð¹Ð»Ñƒ Ð¾Ñ‚ ÐºÐ¾Ñ€Ð½Ñ ÑÐµÑ€Ð²ÐµÑ€Ð°
  */
 function parse_excel_file( $filename ){
-    // ïîäêëþ÷àåì áèáëèîòåêó
+    // Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ð°ÐµÐ¼ Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÑƒ
     require_once dirname(__FILE__) . '/PHPExcel/Classes/PHPExcel.php';
 
     $result = array();
 
-    // ïîëó÷àåì òèï ôàéëà (xls, xlsx), ÷òîáû ïðàâèëüíî åãî îáðàáîòàòü
+    // Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ñ‚Ð¸Ð¿ Ñ„Ð°Ð¹Ð»Ð° (xls, xlsx), Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ ÐµÐ³Ð¾ Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ñ‚ÑŒ
     $file_type = PHPExcel_IOFactory::identify( $filename );
-    // ñîçäàåì îáúåêò äëÿ ÷òåíèÿ
+    // ÑÐ¾Ð·Ð´Ð°ÐµÐ¼ Ð¾Ð±ÑŠÐµÐºÑ‚ Ð´Ð»Ñ Ñ‡Ñ‚ÐµÐ½Ð¸Ñ
     $objReader = PHPExcel_IOFactory::createReader( $file_type );
-    $objPHPExcel = $objReader->load( $filename ); // çàãðóæàåì äàííûå ôàéëà â îáúåêò
-    $result = $objPHPExcel->getActiveSheet()->toArray(); // âûãðóæàåì äàííûå èç îáúåêòà â ìàññèâ
+    $objPHPExcel = $objReader->load( $filename ); // Ð·Ð°Ð³Ñ€ÑƒÐ¶Ð°ÐµÐ¼ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ñ„Ð°Ð¹Ð»Ð° Ð² Ð¾Ð±ÑŠÐµÐºÑ‚
+    $result = $objPHPExcel->getActiveSheet()->toArray(); // Ð²Ñ‹Ð³Ñ€ÑƒÐ¶Ð°ÐµÐ¼ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð· Ð¾Ð±ÑŠÐµÐºÑ‚Ð° Ð² Ð¼Ð°ÑÑÐ¸Ð²
 
     return $result;
 }
 
 /*
- * Ñ÷èòûâàåò äàííûå èç xml ôàéëà òîìîâ â ìàññèâ ['id' => 'name']
+ * Ð¡Ñ‡Ð¸Ñ‚Ñ‹Ð²Ð°ÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð· xml Ñ„Ð°Ð¹Ð»Ð° Ñ‚Ð¾Ð¼Ð¾Ð² Ð² Ð¼Ð°ÑÑÐ¸Ð² ['id' => 'name']
  */
 function parse_xml_file_toms($filename)
 {
@@ -45,7 +45,7 @@ function parse_xml_file_toms($filename)
 }
 
 /*
- * Ñ÷èòûâàåò äàííûå èç xml ôàéëà ðàçðàáîò÷èêîâ â ìàññèâ ['id' => 'name']
+ * Ð¡Ñ‡Ð¸Ñ‚Ñ‹Ð²Ð°ÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð· xml Ñ„Ð°Ð¹Ð»Ð° Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸ÐºÐ¾Ð² Ð² Ð¼Ð°ÑÑÐ¸Ð² ['id' => 'name']
  */
 function parse_xml_file_developers($filename)
 {
@@ -63,7 +63,7 @@ function parse_xml_file_developers($filename)
 }
 
 /*
- * Ñ÷èòûâàåò äàííûå èç xml ôàéëà òèïîâ â ìàññèâ ['id' => 'name']
+ * Ð¡Ñ‡Ð¸Ñ‚Ñ‹Ð²Ð°ÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð· xml Ñ„Ð°Ð¹Ð»Ð° Ñ‚Ð¸Ð¿Ð¾Ð² Ð² Ð¼Ð°ÑÑÐ¸Ð² ['id' => 'name']
  */
 function parse_xml_file_types($filename)
 {
