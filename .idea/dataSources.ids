@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - eatd@localhost" uuid="f5e6e461-8c80-4c3d-8936-462d05c4b78c">
+    <database-info product="MySQL" version="5.6.26-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="eatd"/>
+    <table name="admin_capabilities" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="position" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url_items" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="action" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="height" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="OTA="/>
+      <column name="parent" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="icon" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="show" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J3llcyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="admin_capabilities_value" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LTQu9GPINC60L7Qs9C+INC00L7RgdGC0YPQv9C90LAg0LLQvtC30LzQvtC20L3QvtGB0YLRjA=="/>
+      <column name="admin_capability_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0LrQsNC60LDRjyDQstC+0LfQvNC+0LbQvdC+0YHRgtGMINCw0LTQvNC40L3QuNGB0YLRgNC40YDQvtCy0LDQvdC40Y8="/>
+      <column name="active" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw=="/>
+      <column name="active_item" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="backup_list" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="time" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="0LLRgNC10LzRjyDRgdC+0LfQtNCw0L3QuNGPINCx0Y3QutCw0L/QsA=="/>
+      <column name="file_name" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="0L3QsNC30LLQsNC90LjRjyDRhNCw0LnQu9CwINGBINCx0Y3QutCw0L/QvtC8"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="cron_mailings" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="date_field" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email_field" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="table_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="conditions" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="layout_template" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="content_template" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="subject" sqlType="VARCHAR" precision="256" scale="0" nullable="false" jdbcType="12"/>
+      <column name="from_email" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="from_name" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="active" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="cron_mailings_progress" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="mailing_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="sent" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_1" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_1" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_2" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_3" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_4" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_5" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_6" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_7" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="merge_data_7" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_48" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_49" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_50" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_10" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_52" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_11" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_53" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_12" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_54" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_55" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_57" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_58" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="merge_data_10" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="merge_data_11" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_2" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_8" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_9" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="merge_data_1" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_3" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_10" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_11" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_12" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_4" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_13" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_14" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_15" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_16" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_17" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_18" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_19" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_20" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_21" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_22" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_23" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_24" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_5" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_25" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_26" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_27" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_28" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_29" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_30" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_6" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_31" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_32" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_33" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_7" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_34" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_35" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_8" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_43" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_44" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_45" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_46" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_47" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_9" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="create_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="change_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="delete" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J25vJw=="/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29mZic="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_51" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_connection" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="table_from" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LIg0Y3RgtC+0Lkg0YLQsNCx0LvQuNGG0LUg0LXRgdGC0Ywg0L/QvtC70LUg0L7QsdGK0LXQtNC40L3QtdC90LjRjw=="/>
+      <column name="table_to" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" remarks="0YEg0Y3RgtC+0Lkg0YLQsNCx0LvQuNGG0LXQuSDQv9GA0L7QuNGB0YXQvtC00LjRgiDQvtCx0YrQtdC00LjQvdC10L3QuNC1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_dictionary" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="list_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0LTQu9GPINC60LDQutC40YUg0L/QvtC70LXQuSDRgdC/0LjRgdC+0LosINC/0LXRgNC10YfQuNGB0LvQtdC90L3QviDQsiDRhNC+0YDQvNCw0YLQtTogfDF8Mnw1NXwg"/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDRgdC70L7QstCw0YDRjyDQtNC70Y8g0LrQvtC90LrRgtGA0LXRgtC90L7Qs9C+INC/0L7Qu9GP"/>
+      <column name="multilangual" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LzQvtC90L7Qs9C+0Y/Qt9GL0YfQvdC+0LUg0LfQvdCw0YfQtdC90LjQtQ=="/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_garbage" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0LrQtdC8INGD0LTQsNC70LXQvdC+"/>
+      <column name="data_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0YEg0LrQsNC60L7QuSDRgtCw0LHQu9C40YbRiw=="/>
+      <column name="data" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0YPQtNCw0LvQtdC90L3Ri9C1INC00LDQvdC90YvQtQ=="/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" remarks="0LrQvtCz0LTQsCDRg9C00LDQu9C40Lsg0LfQsNC/0LjRgdGM" version="true"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_list" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDRgdC/0LjRgdC60LAg0LTQu9GPINC60L7QvdC60YLRgNC10YLQvdC+0LPQviDQv9C+0LvRjw=="/>
+      <column name="list_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0LTQu9GPINC60LDQutC40YUg0L/QvtC70LXQuSDRgdC/0LjRgdC+0LosINC/0LXRgNC10YfQuNGB0LvQtdC90L3QviDQsiDRhNC+0YDQvNCw0YLQtTogfDF8Mnw1NXwg"/>
+      <column name="native_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA==" remarks="0J/QtdGA0LLQvtC90LDRh9Cw0LvRjNC90YvQuSDQuNC00LXQvdGC0LjRhNC40LrQsNGC0L7RgCDQt9C90LDRh9C10L3QuNGPLCDQuNGB0L/QvtC70YzQt9GD0LXRgtGB0Y8g0L/RgNC4INC40LzQv9C+0YDRgtC1L9GN0LrRgdC/0L7RgNGC0LU="/>
+      <column name="multilangual" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LzQvtC90L7Qs9C+0Y/Qt9GL0YfQvdC+0LUg0LfQvdCw0YfQtdC90LjQtQ=="/>
+      <column name="position" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC30LjRhtC40Y8g0LfQvdCw0YfQtdC90LjRjyDQsiDRgdC/0LjRgdC60LU="/>
+      <column name="cell_status" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="row_status" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_list_name" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0L3QsNC30LLQsNC90LjQtQ=="/>
+      <column name="type" sqlType="ENUM" precision="10" scale="0" nullable="true" jdbcType="1" def="J2xpc3Qn" remarks="0YHQv9C40YHQvtC6INC40LvQuCDRgdC70L7QstCw0YDRjA=="/>
+      <column name="field_id" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0LTQu9GPINC60LDQutC40YUg0L/QvtC70LXQuSDRgdC/0LjRgdC+0LosINC/0LXRgNC10YfQuNGB0LvQtdC90L3QviDQsiDRhNC+0YDQvNCw0YLQtTogfDF8Mnw1NXwg"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_table_list" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0YLQsNCx0LvQuNGG0LAg0LTQu9GPINGE0L7RgNC80LjRgNC+0LLQsNC90LjRjyDQvdCw0LLQuNCz0LDRhtC40Lgg0L3QsCDRgdCw0LnRgtC1"/>
+      <column name="created" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" remarks="0LrQvtCz0LTQsCDQsdGL0LvQsCDRgdC+0LfQtNCw0L3QsCDRgtCw0LHQu9C40YbQsA=="/>
+      <column name="shadow" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="data_versions" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0LrQtdC8INC40LfQvNC10L3QtdC90L4="/>
+      <column name="page_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0LrQsNC60LDRjyDRgdGC0YDQsNC90LjRhtCw"/>
+      <column name="field_id" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0LrQsNC60L7QtSDQv9C+0LvQtQ=="/>
+      <column name="data_element_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0LIg0LrQsNC60L7QuSDRgdGC0YDQvtC60LU="/>
+      <column name="table_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0LIg0LrQsNC60L7QuSDRgtCw0LHQu9C40YbQtQ=="/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0LfQvdCw0YfQtdC90LjQtQ=="/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" remarks="0LrQvtCz0LTQsCDRgdC00LXQu9Cw0L3QviDQuNC30LzQtdC90LXQvdC40LU=" version="true"/>
+      <column name="status" sqlType="ENUM" precision="8" scale="0" nullable="true" jdbcType="1" def="J3dhaXRpbmcn" remarks="0YHRgtCw0YLRg9GBINC40LfQvNC10L3QtdC90LjRjw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="email" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="subject" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="message" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_3CE7F359A832C1C9" table="email_delivery" schema="" catalog="eatd" columns="email_id"/>
+    </table>
+    <table name="email_delivery" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="email_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="createdAt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updatedAt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="from_email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="from_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_3CE7F359A76ED395" columns="user_id" ref-table="users" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_3CE7F359A832C1C9" columns="email_id" ref-table="email" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_71353A744D31596" table="email_delivery_tag" schema="" catalog="eatd" columns="email_delivery_id"/>
+      <exported-key name="FK_36DE93DF12136921" table="email_receiver" schema="" catalog="eatd" columns="delivery_id"/>
+      <index name="UNIQ_3CE7F359A832C1C9" unique="true" columns="email_id"/>
+      <index name="IDX_3CE7F359A76ED395" unique="false" columns="user_id"/>
+    </table>
+    <table name="email_delivery_tag" schema="" catalog="eatd" type="TABLE">
+      <column name="email_delivery_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="email_tag_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="email_delivery_id,email_tag_id"/>
+      <foreign-key name="FK_71353A744D31596" columns="email_delivery_id" ref-table="email_delivery" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_71353A74C748B0E1" columns="email_tag_id" ref-table="email_tag" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="IDX_71353A744D31596" unique="false" columns="email_delivery_id"/>
+      <index name="IDX_71353A74C748B0E1" unique="false" columns="email_tag_id"/>
+    </table>
+    <table name="email_link" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="email_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="link" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="email_link_click" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_email_link" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="email_receiver" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="delivery_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="viewId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="rowId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="isDelivered" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_36DE93DF12136921" columns="delivery_id" ref-table="email_delivery" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_61CB8B0BCD53EDB6" table="email_view" schema="" catalog="eatd" columns="receiver_id"/>
+      <index name="IDX_36DE93DF12136921" unique="false" columns="delivery_id"/>
+    </table>
+    <table name="email_tag" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_71353A74C748B0E1" table="email_delivery_tag" schema="" catalog="eatd" columns="email_tag_id"/>
+      <index name="UNIQ_8A4D97C52B36786B" unique="true" columns="title"/>
+    </table>
+    <table name="email_view" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="receiver_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_61CB8B0BCD53EDB6" columns="receiver_id" ref-table="email_receiver" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="IDX_61CB8B0BCD53EDB6" unique="false" columns="receiver_id"/>
+    </table>
+    <table name="fields" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type_id" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" remarks="0LrQsNC60L7Qs9C+INGC0LjQv9CwINC/0L7Qu9C1"/>
+      <column name="table_id" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" remarks="0Log0LrQsNC60L7QuSDRgtCw0LHQu9C40YbQtSDRgSDQtNCw0L3Ri9C90LzQuCDQvtGC0L3QvtGB0LjRgtGB0Y8g0L/QvtC70LU="/>
+      <column name="is_virtual" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0L/QvtC70LUg0LjQtyDQtNCw0L3QvdGL0YUg0LjQu9C4INGB0L/QtdGG0LjQsNC70YzQvdC+INGB0L7Qt9C00LDQvdC90L7QtSDQv9C+0LQg0L7RgtC+0LHRgNCw0LbQtdC90LjQtQ=="/>
+      <column name="shadow_field" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="is_main_field" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="fields_data_restriction" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="fields" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0L/QtdGA0LXRh9C10L3RjCDQv9C+0LvQtdC5LCDQutC+0YLQvtGA0YvQtSDQtNC+0LvQttC90Ysg0L/QvtC00YfQuNC90LjRgtGB0Y8g0YPRgdC70L7QstC40Y4sINC30LDQv9C40YHRi9Cy0LDRjtGC0YHRjyDQsiDRhNC+0YDQvNCw0YLQtTogfDk5fDIzfA=="/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDRg9GB0LvQvtCy0LjRjw=="/>
+      <column name="action" sqlType="ENUM" precision="2" scale="0" nullable="true" jdbcType="1" def="Jz0n" remarks="0YLQuNC/INGD0YHQu9C+0LLQuNGP"/>
+      <column name="type" sqlType="ENUM" precision="5" scale="0" nullable="true" jdbcType="1" def="J2hpZGUn" remarks="0L/QvtC60LDQt9GL0LLQsNGC0YwgINC40LvQuCDQvdC10YIg0L/QvtC70Y8g0LjQtyDQutC+0LvQvtC90LrQuCBmaWVsZHM="/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC70LUsINC6INC60L7RgtC+0YDQvtC80YMg0L/RgNC40LzQtdC90Y/QtdGC0YHRjyDRg9GB0LvQvtCy0LjQtQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="fields_data_view" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0Y3RgtC+INC90LDQt9Cy0LDQvdC40LUg0Y/Qt9GL0LrQsCDQstC40LTQuNGCINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjA=="/>
+      <column name="action" sqlType="ENUM" precision="2" scale="0" nullable="true" jdbcType="1" def="Jz0n" remarks="0YLQuNC/INC+0LPRgNCw0L3QuNGH0LXQvdC40Y8="/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L3QsCDRjdGC0L4g0L/QvtC70LUg0L3QsNC60LvQsNC00YvQstCw0LXRgtGB0Y8g0L7Qs9GA0LDQvdC40YfQtdC90LjQtQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="fields_type" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="0LrQsNC6INC90LDQt9GL0LLQsNC10YLRgdGPINGC0LjQvyDQv9C+0LvRjw=="/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0LrQsNC6INC+0LHQvtC30L3QsNGH0LDQtdGC0YHRjyDRgtC40L8g0L/QvtC70Y8g0LIg0LHQsNC30LU="/>
+      <column name="position" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0J/QvtC30LjRhtC40Y8="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="file_list" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0YLQtdC60YPRidC10LUg0L3QsNC30LLQsNC90LjQtSDRhNCw0LnQu9Cw" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0L3QsNGH0LDQu9GM0L3QvtC1INC90LDQt9Cy0LDQvdC40LUg0YTQsNC50LvQsA=="/>
+      <column name="type" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" remarks="0YLQuNC/INGE0LDQudC70LAsINC90LDQv9GA0LjQvNC10YA6IGpwZw=="/>
+      <column name="active" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="J3llcyc=" remarks="0LXRgdC70Lgg0LDQutGC0LjQstC90YvQuSAtIHllcywg0LXRgdC70Lgg0L3QtdGCIC0gdmlld19pZHxyb3dfaWQ="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="groups" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="view_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="position" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="display_mode" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="LTE="/>
+      <column name="hide_name" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="language" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" autoIncrement="true"/>
+      <column name="lang_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="0Y3RgtC+INC90LDQt9Cy0LDQvdC40LUg0Y/Qt9GL0LrQsCDQstC40LTQuNGCINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjA=="/>
+      <column name="short_lang_name" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1" remarks="0LfQvdCw0YfQtdC90LjRjyDQv9C+0LvRjyDQuNGB0L/QvtC70YzQt9GD0LXRgtGB0Y8g0LrQsNC6INC90LDQt9Cy0LDQvdC40LUg0LrQvtC70L7QvdC60Lgg0L/QtdGA0LXQstC+0LTQsCDQsiDRgtCw0LHQu9C40YbQtSB0cmFuc2xhdGlvbg=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="lang_name" unique="true" columns="lang_name"/>
+      <index name="short_lang_name" unique="true" columns="short_lang_name"/>
+    </table>
+    <table name="list_fields" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="field_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L/QvtC70Y8="/>
+      <column name="list_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0YHQv9C40YHQutCw"/>
+      <column name="table_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0YLQsNCx0LvQuNGG0Ys="/>
+      <column name="values" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YDRiyDQt9C90LDRh9C10L3QuNC5INGB0L/QuNGB0LrQsA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="list_item_status" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="class_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="log_type" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="ENUM" precision="16" scale="0" nullable="true" jdbcType="1" def="J25vdGljZSc=" remarks="0YLQuNC/INC70L7Qs9Cw"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="logs_1" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0YLQuNC/0LAg0LvQvtCz0LAg0YPQutCw0LfQsNC90L3Ri9C5INCyINGC0LDQsdC70LjRhtGLIGxvZ190eXBl"/>
+      <column name="user" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GMINC60L7RgtC+0YDRi9C5INGB0L7Qt9C00LDQuyDQu9C+0LM="/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" remarks="0LTQsNGC0LAg0YHQvtC30LTQsNC90LjRjyDQu9C+0LPQsA=="/>
+      <column name="table" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0YLQsNCx0LvQuNGG0LAg0L3QsNC0INC60L7RgtC+0YDQvtC5INC/0YDQvtCy0L7QtNC40LvQuNGB0Ywg0LTQtdC50YHRgtCy0LjRjw=="/>
+      <column name="field" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC70LUg0L3QsNC0INC60L7RgtC+0YDRi9C8INC/0YDQvtCy0L7QtNC40LvQuNGB0Ywg0LTQtdC50YHRgtCy0LjRjw=="/>
+      <column name="data_element" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0Y3Qu9C10LzQtdC90YIg0L/QvtC70Y8g0L3QsNC0INC60L7RgtC+0YDRi9C8INC/0YDQvtCy0L7QtNC40LvQuNGB0Ywg0LTQtdC50YHRgtCy0LjRjw=="/>
+      <column name="list" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0YHQv9C40YHQvtC6INC90LDQtCDQutC+0YLQvtGA0YvQvCDQv9GA0L7QstC+0LTQuNC70LjRgdGMINC00LXQudGB0YLQstC40Y8="/>
+      <column name="view" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L7RgtC+0LHRgNCw0LbQtdC90LjQtSDQvdCw0LQg0LrQvtGC0L7RgNGL0Lwg0L/RgNC+0LLQvtC00LjQu9C40YHRjCDQtNC10LnRgdGC0LLQuNGP"/>
+      <column name="page" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0YHRgtGA0LDQvdC40YbQsCDQvdCw0LQg0LrQvtGC0L7RgNC+0Lkg0L/RgNC+0LLQvtC00LjQu9C40YHRjCDQtNC10LnRgdGC0LLQuNGP"/>
+      <column name="person" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GMINC90LDQtCDQutC+0YLQvtGA0YvQvCDQv9GA0L7QstC+0LTQuNC70LjRgdGMINC00LXQudGB0YLQstC40Y8="/>
+      <column name="role" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0YDQvtC70Ywg0L3QsNC0INC60L7RgtC+0YDQvtC5INC/0YDQvtCy0L7QtNC40LvQuNGB0Ywg0LTQtdC50YHRgtCy0LjRjw=="/>
+      <column name="report" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L7RgtGH0LXRgiDQvdCw0LQg0LrQvtGC0L7RgNC+0Lkg0L/RgNC+0LLQvtC00LjQu9C40YHRjCDQtNC10LnRgdGC0LLQuNGP"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="mailing" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" remarks="0LTQsNGC0LAg0L7RgtC/0YDQsNCy0LrQuCDQv9C40YHRjNC80LA="/>
+      <column name="from" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="0L7RgtC/0YDQsNCy0LjRgtC10LvRjA=="/>
+      <column name="to" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="0L/QvtC70YPRh9Cw0YLQtdC70Yw="/>
+      <column name="subject" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0YLQtdC80LAg0L/QuNGB0YzQvNCw"/>
+      <column name="body" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0YLQtdC70L4g0L/QuNGB0YzQvNCw"/>
+      <column name="file" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0L/Rg9GC0Ywg0Log0L/RgNC40LrRgNC10L/Qu9C10L3QvdC+0LzRgyDRhNCw0LnQu9GD"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="menu" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="position" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" remarks="0L/QvtC30LjRhtC40Y8g0LIg0LzQtdC90Y4sINGB0L7RgNGC0LjRgNC+0LLQutCwIEFTQw=="/>
+      <column name="visible" sqlType="ENUM" precision="7" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LDQutGC0LjQstC90LAg0LvQuCDRgdGB0YvQu9C60LAg0Lgg0LIg0LrQsNC60L7QvCDQvNC10L3RjiDQvtC90LAg0L7RgtC+0LHRgNCw0LbQsNC10YLRgdGP"/>
+      <column name="reference" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12" remarks="0YHRgdGL0LvQutCwINCyINGB0LLQvtCx0L7QtNC90L7QvCDRhNC+0YDQvNCw0YLQtSDQtNC70Y8g0L/QtdGA0LXRhdC+0LTQsCwg0LjRgdC/0L7Qu9GM0LfRg9C10YLRgdGPINC10YHQu9C4IGlkRWxlbWVudD0w"/>
+      <column name="where" sqlType="ENUM" precision="5" scale="0" nullable="true" jdbcType="1" def="J2xpbmsn" remarks="0YfRgtC+INC90YPQttC90L4g0LTQtdC70LDRgtGMINGBINC30L3QsNGH0LXQvdC40LXQvCByZWZlcmVuY2U6IHZpZXcsIHBhZ2Ug0YHRgdGL0LvQsNGO0YLRgdGPINC90LAg0YHRgtGA0LDQvdC40YbRgyDQuCDQvtGC0L7QsdGA0LDQttC10L3QuNC1LCDQsCBsaW5rINC/0YDQvtGB0YLQviDQvtGC0LrRgNGL0LLQsNC10YIg0YHRgdGL0LvQutGDLdC30L3QsNGH0LXQvdC40LU="/>
+      <column name="parent" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA==" remarks="0L/QvtC70LUg0LTQu9GPINCy0LvQvtC20LXQvdC90YvRhSDRgdC/0LjRgdC60L7Qsiwg0L/RgNC40LzQtdC90LjQvNCwINC6IHRvcCDQuCBzaWRlYmFyLCBwYXJlbnQg0YPQutCw0LfRi9Cy0LDQtdC5INC90LAgaWQg0YHRgdGL0LvQutC4INC90LAg0YPRgNC+0LLQtdC90Ywg0LLRi9GI0LUsIHBhcmVudD0wIC0g0L/QtdGA0LLRi9C5INGD0YDQvtCy0LXQvdGM"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="page" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" remarks="0L3QsNC30LLQsNC90LjQtSDRgdGC0YDQsNC90LjRhtGL"/>
+      <column name="text" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0YLQtdC60YHRgiDRgdGC0YDQsNC90LjRhtGL"/>
+      <column name="wysiwyg" sqlType="ENUM" precision="3" scale="0" nullable="true" jdbcType="1" def="J29uJw==" remarks="0LLQutC70Y7Rh9C10L0g0LjQu9C4INCy0YvQutC70Y7Rh9C10L0gd3lzaXd5ZyDQtNC70Y8g0YHRgtGA0LDQvdC40YbRiw=="/>
+      <column name="language" sqlType="VARCHAR" precision="2" scale="0" nullable="true" jdbcType="12" remarks="0Y/Qt9GL0Log0YHRgtGA0LDQvdC40YbRiw=="/>
+      <column name="main" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="aWQg0LPQu9Cw0LLQvdC+0Lkg0YHRgtGA0LDQvdC40YbRiw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="pass_recovery" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="recovery_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="aWQg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GPINC60L7RgtC+0YDRi9C5INCy0L7RgdGB0YLQvtC90LDQstC70LjRj9Cy0LLQsNC10YIg0L/QsNGA0L7Qu9GM"/>
+      <column name="access_hash" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" remarks="0YPQvdC40LrQsNC70YzQvdGL0Lkg0YXRjdGIINC00LvRjyDQv9GA0L7QstC10YDQutC4INCy0LDQu9C40LTQvdC+0YHRgtC4INGB0YHRi9C70LrQuCDQstC+0YHRgdGC0LDQvdC+0LLQu9C10L3QuNGPINC/0LDRgNC+0LvRjw=="/>
+      <column name="expires" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LLRgNC10LzRjyDQvdCwINC/0YDQvtGC0Y/QttC10L3QuNC4INC60L7RgtC+0YDQvtCz0L4g0YHRgdC70YvQutCwINCx0YPQtNC10YIg0LLQsNC70LjQtNC90L7QuQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="phinx_versions" schema="" catalog="eatd" type="TABLE">
+      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="end_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="version"/>
+    </table>
+    <table name="push" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="text" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_53D1014AF30BCAF6" table="push_delivery" schema="" catalog="eatd" columns="push_id"/>
+    </table>
+    <table name="push_delivery" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="push_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="createdAt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updatedAt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_53D1014AA76ED395" columns="user_id" ref-table="users" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_53D1014AF30BCAF6" columns="push_id" ref-table="push" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_D1C88807F3831E76" table="push_delivery_tag" schema="" catalog="eatd" columns="push_delivery_id"/>
+      <exported-key name="FK_59E861CC12136921" table="push_receiver" schema="" catalog="eatd" columns="delivery_id"/>
+      <index name="UNIQ_53D1014AF30BCAF6" unique="true" columns="push_id"/>
+      <index name="IDX_53D1014AA76ED395" unique="false" columns="user_id"/>
+    </table>
+    <table name="push_delivery_tag" schema="" catalog="eatd" type="TABLE">
+      <column name="push_delivery_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="push_tag_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="push_delivery_id,push_tag_id"/>
+      <foreign-key name="FK_D1C888079168B231" columns="push_tag_id" ref-table="push_tag" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="FK_D1C88807F3831E76" columns="push_delivery_id" ref-table="push_delivery" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="IDX_D1C888079168B231" unique="false" columns="push_tag_id"/>
+      <index name="IDX_D1C88807F3831E76" unique="false" columns="push_delivery_id"/>
+    </table>
+    <table name="push_receiver" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="delivery_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="viewId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="rowId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="token" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="is_opened" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_59E861CC12136921" columns="delivery_id" ref-table="push_delivery" ref-schema="" ref-catalog="eatd" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="IDX_59E861CC12136921" unique="false" columns="delivery_id"/>
+    </table>
+    <table name="push_tag" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_D1C888079168B231" table="push_delivery_tag" schema="" catalog="eatd" columns="push_tag_id"/>
+      <index name="UNIQ_3C7083F32B36786B" unique="true" columns="title"/>
+    </table>
+    <table name="role_page" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="edit" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LzQvtC20LXRgiDQu9C4INGA0L7Qu9GMINGA0LXQtNCw0LrRgtC40YDQvtCy0LDRgtGMINGB0YLRgNCw0L3QuNGG0YM="/>
+      <column name="page_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="aWQg0YHRgtGA0LDQvdC40YbRiw=="/>
+      <column name="role_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="aWQg0YDQvtC70LgsINC60L7RgtC+0YDQsNGPINC80L7QttC10YIg0L/RgNC+0YHQvNCw0YLRgNC40LLQsNGC0Ywg0Y3RgtGDINGB0YLRgNCw0L3QuNGG0YM="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="role_view" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="data_admin" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LzQvtC20LXRgiDQu9C4INCy0LjQtNC10YLRjCDQuNC30LzQtdC90LXQvdC40Y8g0LLQviDQstGM0Y7RhdC1"/>
+      <column name="data_insert" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LzQvtC20LXRgiDQu9C4INC00L7QsdCw0LLQu9GP0YLRjCDQt9Cw0L/QuNGB0Lg="/>
+      <column name="data_insert_confirm" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J3llcyc=" remarks="0LTQvtC70LbQvdGLINC70Lgg0LXQs9C+INC30LDQv9C40YHQuCDQv9C+0LTQstC10YDQs9Cw0YLRjNGB0Y8g0LzQvtC00LXRgNCw0YbQuNC4"/>
+      <column name="data_delete" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LzQvtC20LXRgiDQu9C4INGD0LTQsNC70Y/RgtGMINC30LDQv9C40YHQuA=="/>
+      <column name="data_delete_confirm" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J3llcyc=" remarks="0LTQvtC70LbQvdGLINC70Lgg0LXQs9C+INGD0LTQsNC70LXQvdC40Y8g0L/QvtC00LLQtdGA0LPQsNGC0YzRgdGPINC80L7QtNC10YDQsNGG0LjQuA=="/>
+      <column name="data_visible" sqlType="ENUM" precision="9" scale="0" nullable="true" jdbcType="1" def="J2FsbCc=" remarks="0LrQsNC60LjQtSDQt9Cw0L/QuNGB0Lgg0LzQvtC20LXRgiDQstC40LTQtdGC0Ywg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GM"/>
+      <column name="data_logs" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LzQvtC20LXRgiDQu9C4INGB0LzQvtGC0YDQtdGC0Ywg0LvQvtCz0Lg="/>
+      <column name="qrcode" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LjRgdC/0L7Qu9GM0LfQvtCy0LDQvdC40LUgUVIg0LrQvtC00LA="/>
+      <column name="view_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="role_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="can_export" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="can_import" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="can_send_mail" sqlType="ENUM" precision="4" scale="0" nullable="false" jdbcType="1" def="J25vJw==" remarks="0LzQvtC20L3QviDQu9C4INC+0YLQv9GA0LDQstC70Y/RgtGMINC/0LjRgdGM0LzQsA=="/>
+      <column name="can_send_pushes" sqlType="ENUM" precision="4" scale="0" nullable="false" jdbcType="1" def="J25vJw==" remarks="0LzQvtC20L3QviDQu9C4INC+0YLQv9GA0LDQstC70Y/RgtGMINC/0YPRiNC4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="role_view_perm" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="data_edit" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LzQvtC20LXRgiDQu9C4INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjCDRgNC10LTQsNC60YLQuNGA0L7QstCw0YLRjCDQtNCw0L3QvdGL0LU="/>
+      <column name="data_edit_confirm" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J3llcyc=" remarks="0L3Rg9C20L3QsCDQu9C4INC80L7QtNC10YDQsNGG0LjRjyDQuNC30LzQtdC90LXQvdC90YvRhSDQtNCw0L3QvdGL0YU="/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="aWQg0L/QvtC70Y8="/>
+      <column name="role_view_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0Log0LrQsNC60LzQvtGDINC+0YLQvtCx0YDQsNC20LXQvdC40Y4g0L7RgtC90L7RgdC40YLRgdGPINC/0L7Qu9C1"/>
+      <column name="data_edit_only_owner" sqlType="ENUM" precision="4" scale="0" nullable="false" jdbcType="1" def="J25vJw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="roles" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="position" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="settings" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0LfQvdCw0YfQtdC90LjQtSDQvdCw0YHRgtGA0L7QudC60Lg="/>
+      <column name="values" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0L/QtdGA0LXRh9C10L3RjCDQtNC+0YHRgtGD0L/QvdGL0YUg0LfQvdCw0YfQtdC90LjQuSDQtNC70Y8gc2VsZWN0INCyINGE0L7RgNC80LDRgtC1OiDQv9C10YDQstC+0LVf0LfQvdCw0YfQtdC90LjQtV5pZFRyYW5zbGF0aW9ufNCy0YLQvtGA0L7QtV/Qt9C90LDRh9C10L3QuNC1XmlkVHJhbnNsYXRpb2580YLRgNC10YLRjNC1X9C30L3QsNGH0LXQvdC40LVeaWRUcmFuc2xhdGlvbg=="/>
+      <column name="type" sqlType="ENUM" precision="8" scale="0" nullable="true" jdbcType="1" remarks="0YLQuNC/INCy0L3QtdGI0L3QtdCz0L4g0LLQuNC00LAg0L3QsNGB0YLRgNC+0LnQutC4"/>
+      <column name="hide" sqlType="ENUM" precision="5" scale="0" nullable="true" jdbcType="1" remarks="0L/QvtC60LDQt9GL0LLQsNGC0Ywg0L3QsNGB0YLRgNC+0LnQutGDINC40LvQuCDQvdC10YI="/>
+      <column name="parent" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MQ==" remarks="0Log0LrQsNC60L7QuSDQutCw0YLQtdCz0L7RgNC40Lgg0L7RgtC90L7RgdC40YLRgdGPINC90LDRgdGC0YDQvtC50LrQsA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sidebar" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="type" sqlType="ENUM" precision="5" scale="0" nullable="true" jdbcType="1" def="J3RleHQn" remarks="0LLRi9Cy0LXRgdGC0Lgg0YHQvtC00LXRgNC20LjQvNC+0LUg0LjQu9C4INC/0L7QtNC60LvRjtGH0LjRgtGMINGE0LDQudC7"/>
+      <column name="active" sqlType="ENUM" precision="9" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LIg0LrQsNC60L7QvCDRgdCw0LnQtNCx0LDRgNC1INC/0L7QutCw0LfRi9Cy0LDRgtGMINGN0LvQtdC80LXQvdGC"/>
+      <column name="position" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="role_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="stat_info" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="value" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDQv9C+0LvRjw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="stat_report_list" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GPINGB0L7Qt9C00LDQstGI0LXQs9C+INC+0YLRh9C10YI="/>
+      <column name="created" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" remarks="0LTQsNGC0LAg0YHQvtC30LTQsNC90LjRjyDQvtGC0YfQtdGC0LA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="stat_reports" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="report_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L7RgtGH0LXRgtCw"/>
+      <column name="type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" remarks="0YLQuNC/INGN0LvQtdC80LXQvdGC0LAg0L7RgtGH0LXRgtCw"/>
+      <column name="value" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" remarks="0YHQv9C40YHQvtC6INC30L3QsNGH0LXQvdC40Lkg0LTQu9GPINGN0LvQtdC80LXQvdGC0LAg0L7RgtGH0LXRgtCw"/>
+      <column name="fields" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" remarks="0YHQv9C40YHQvtC6INC/0L7Qu9C10Lkg0LTQu9GPINGN0LvQtdC80LXQvdGC0LAg0L7RgtGH0LXRgtCw"/>
+      <column name="group" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="J0RBWSc=" remarks="0YLQuNC/INCz0YDRg9C/0L/QuNGA0L7QstC60Lg="/>
+      <column name="from_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" remarks="0LTQsNGC0LAg0L7RgiDQutC+0YLQvtGA0L7QuSDQsdGA0LDRgtGMINC00LDQvdC90YvQtQ=="/>
+      <column name="to_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" remarks="0LTQsNGC0LAg0LTQviDQutC+0YLQvtGA0L7QuSDQsdGA0LDRgtGMINC00LDQvdC90YvQtQ=="/>
+      <column name="chart" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" remarks="0L3QsNC70LjRh9C40LUg0LPRgNCw0YTQuNC60LA="/>
+      <column name="row" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MQ==" remarks="0LvQuNC90LjRjyDQsiDQutC+0YLQvtGA0L7QuSDQvdCw0YXQvtC00LjRgtGB0Y8g0Y3Qu9C10LzQtdC90YI="/>
+      <column name="users" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="0YDQsNC30YDQtdGJ0LXQvdC90YvQtSDQv9C+0LvRjNC30L7QstCw0YLQtdC70Lg="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="stat_users_days" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GP"/>
+      <column name="role_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0YDQvtC70Lgg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GP"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" remarks="0LTQsNGC0LAg0Y3Qu9C10LzQtdC90YLQsCDRgdGC0LDRgtC40YHRgtC40LrQuA=="/>
+      <column name="added" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0LTQvtCx0LDQstC70LXQvdGL0YUg0LfQvdCw0YfQtdC90LjQuQ=="/>
+      <column name="deleted" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0YPQtNCw0LvQtdC90L3Ri9GFINC30L3QsNGH0LXQvdC40Lk="/>
+      <column name="changed" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0LjQt9C80LXQvdC10L3QvdGL0YUg0LfQvdCw0YfQtdC90LjQuQ=="/>
+      <column name="versioned" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0LfQvdCw0YfQtdC90LjQuSDQtNC+0LHQsNCy0LvQtdC90YvRhSDQsiDQstC10YDRgdC40Lg="/>
+      <column name="searched" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0L/QvtC40YHQutC+0LI="/>
+      <column name="looked" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0L/RgNC+0YHQvNC+0YLRgNC+0LI="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="stat_views_days" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="view_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L7RgtC+0LHRgNCw0LbQtdC90LjRjw=="/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" remarks="0LTQsNGC0LAg0Y3Qu9C10LzQtdC90YLQsCDRgdGC0LDRgtC40YHRgtC40LrQuA=="/>
+      <column name="added" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0LTQvtCx0LDQstC70LXQvdGL0YUg0LfQvdCw0YfQtdC90LjQuQ=="/>
+      <column name="deleted" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0YPQtNCw0LvQtdC90L3Ri9GFINC30L3QsNGH0LXQvdC40Lk="/>
+      <column name="changed" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0LjQt9C80LXQvdC10L3QvdGL0YUg0LfQvdCw0YfQtdC90LjQuQ=="/>
+      <column name="versioned" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0LfQvdCw0YfQtdC90LjQuSDQtNC+0LHQsNCy0LvQtdC90YvRhSDQsiDQstC10YDRgdC40Lg="/>
+      <column name="searched" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0L/QvtC40YHQutC+0LI="/>
+      <column name="looked" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0L/RgNC+0YHQvNC+0YLRgNC+0LI="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="view_id" unique="false" columns="view_id"/>
+    </table>
+    <table name="stat_views_fields" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="view_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L7RgtC+0LHRgNCw0LbQtdC90LjRjw=="/>
+      <column name="field_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L/QvtC70Y8="/>
+      <column name="empty" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0L/Rg9GB0YLRi9GFINC/0L7Qu9C10Lk="/>
+      <column name="less3" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0L/QvtC70LXQuSDQtNC+IDMg0YHQuNC80LLQvtC70L7Qsg=="/>
+      <column name="less10" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0L/QvtC70LXQuSDQtNC+IDEwINGB0LjQvNCy0L7Qu9C+0LI="/>
+      <column name="more10" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0L/QvtC70LXQuSDQsdC+0LvQtdC1IDEwINGB0LjQvNCy0L7Qu9C+0LI="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="translation" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="ru" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0L/QtdGA0LXQstC+0LQg0LLRgdC10YUg0YLQtdC60YHRgtC+0LIg0L3QsCDRgNGD0YHRgdC60LjQuQ=="/>
+      <column name="ua" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0L/QtdGA0LXQstC+0LQg0LLRgdC10YUg0YLQtdC60YHRgtC+0LIg0L3QsCDRg9C60YDQsNC40L3RgdC60LjQuQ=="/>
+      <column name="en" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0L/QtdGA0LXQstC+0LQg0LLRgdC10YUg0YLQtdC60YHRgtC+0LIg0L3QsCDQsNC90LPQu9C40LnRgdC60LjQuQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user_default_field" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="data_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user_fields" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="visible_user" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J3llcyc=" remarks="0LLQuNC00LjRgiDQu9C4INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjCDQv9C+0LvQtQ=="/>
+      <column name="visible_users" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LLQuNC00Y/RgiDQu9C4INC/0L7Qu9C1INC00YDRg9Cz0LjQtSDQv9C+0LvRjNC30L7QstCw0YLQtdC70Lg="/>
+      <column name="edit_user" sqlType="ENUM" precision="5" scale="0" nullable="true" jdbcType="1" def="J3llcyc=" remarks="0L/RgNCw0LLQsCDQvdCwINC/0YDQsNCy0LrRgyDQv9C+0LvRjzogbmVlZCAtINC+0LHRj9C30LDRgtC10LvRjNC90L4g0LTQvtC70LbQvdC+INCx0YvRgtGMINC30LDQv9C+0LvQvdC10L3QviDQv9C+0LvRjNC30L7QstCw0YLQtdC70LXQvCwgeWVzIC0g0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GMINC80L7QttC10YIg0L/RgNCw0LLQuNGC0Ywg0LfQvdCw0YfQtdC90LjQtSwgbm8gLSDRgtC+0LvRjNC60L4g0LDQtNC80LjQvSDQvNC+0LbQtdGCINC/0YDQsNCy0LjRgtGM"/>
+      <column name="type_id" sqlType="ENUM" precision="5" scale="0" nullable="true" jdbcType="1" def="J3RleHQn" remarks="0LrQsNC60L7Qs9C+INGC0LjQv9CwINC/0L7Qu9C1"/>
+      <column name="position" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC30LjRhtC40Y8g0L/QvtC70Y8="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user_fields_list" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDRgdC/0LjRgdC60LA="/>
+      <column name="user_field_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC70LUsINC6INC60L7RgtC+0YDQvtC80YMg0L7RgtC90L7RgdC40YLRgdGPINGB0L/QuNGB0L7Qug=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user_fields_value" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDQv9C+0LvRjw=="/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="aWQg0L/QvtC70Y8="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="aWQg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GP"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user_restriction" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GPINC00LvRjyDQutC+0YLQvtGA0L7Qs9C+INC90LDQv9C40YHQsNC90L4g0YPRgdC70L7QstC40Y8="/>
+      <column name="view_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L7RgtC+0LHRgNCw0LbQtdC90LjRjw=="/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDRg9GB0LvQvtCy0LjRjw=="/>
+      <column name="action" sqlType="ENUM" precision="8" scale="0" nullable="true" jdbcType="1" def="Jz0n" remarks="0YLQuNC/INGD0YHQu9C+0LLQuNGP"/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC70LUsINC6INC60L7RgtC+0YDQvtC80YMg0L/RgNC40LzQtdC90Y/QtdGC0YHRjyDRg9GB0LvQvtCy0LjQtQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user_session" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="aWQg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GP"/>
+      <column name="time" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="VU5JWCDQstGA0LXQvNGPLCDQtNC+INC60L7RgtC+0YDQvtCz0L4g0LDQutGC0LjQstC90LAg0YHQtdGB0YHQuNGP"/>
+      <column name="ip_address" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="aXAg0LDQtNGA0LXRgSwg0YEg0LrQvtGC0L7RgNC+0LPQviDQv9GA0L7RiNC70LAg0LDRg9GC0LXQvdGC0LjRhNC40LrQsNGG0LjRjw=="/>
+      <column name="sid" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="0LrQu9GO0Ycg0YHQtdGB0YHQuNC4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user_template_field" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="view_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="150" scale="0" nullable="false" jdbcType="12"/>
+      <column name="hashed_password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="registration_day" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="type" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="language" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+      <column name="avatar" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="time" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_3CE7F359A76ED395" table="email_delivery" schema="" catalog="eatd" columns="user_id"/>
+      <exported-key name="FK_53D1014AA76ED395" table="push_delivery" schema="" catalog="eatd" columns="user_id"/>
+      <index name="email" unique="true" columns="email"/>
+      <index name="username" unique="true" columns="username"/>
+    </table>
+    <table name="users_days" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="idUser" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GP"/>
+      <column name="timeIn" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0LLRgNC10LzQtdC90Lgg0L7QvdC70LDQudC9"/>
+      <column name="pages" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0L/RgNC+0YHQvNC+0YLRgNC10L3QvdGL0YUg0YHRgtGA0LDQvdC40YY="/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDEtMDEtMDEn" remarks="0LTQsNGC0LAg0L/QvtGB0LXRidC10L3QuNGP"/>
+      <column name="idIp" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAgSVAg0LDQtNGA0LXRgdCw"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users_ip" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="idUser" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GP"/>
+      <column name="ip" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" def="JzAn" remarks="SVAg0LDQtNGA0LXRgQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="view_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="list_position" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC30LjRhtC40Y8g0L/QvtC70Y8g0L3QsCDRgdGC0YDQsNC90LjRhtC1INC30LDQv9C40YHQuA=="/>
+      <column name="search_position" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC30LDRhtC40Y8g0L/QvtC70Y8g0LIg0L/QvtC40YHQutC1"/>
+      <column name="table_position" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L/QvtC30LjRhtC40Y8g0YHRgtC+0LvQsdGG0LAgKNC/0L7Qu9GPKSDQsiDRgtCw0LHQu9C40YbQtQ=="/>
+      <column name="search_visible" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J3llcyc=" remarks="0LLQuNC00L3QviDQu9C4INC/0L7Qu9C1INCyINC/0L7QuNGB0LrQtQ=="/>
+      <column name="advance_search_visible" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J3llcyc=" remarks="0LLQuNC00L3QviDQu9C4INC/0L7Qu9C1INCyINGA0LDRgdGI0LjRgNC10L3QvdC+0Lwg0L/QvtC40YHQutC1"/>
+      <column name="table_visible" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J3llcyc=" remarks="0LLQuNC00L3QviDQu9C4INC/0L7Qu9C1INCyINGC0LDQsdC70LjRhtC1"/>
+      <column name="table_ratio" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MTUw" remarks="0YjQuNGA0LjQvdCwINGB0YLQvtC70LHRhtCwICjQv9C+0LvRjykg0LIg0YLQsNCx0LvQuNGG0LU="/>
+      <column name="main_field" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0Y/QstC70Y/QtdGC0YHRjyDQu9C4INC/0L7Qu9C1INCz0LvQsNCy0L3Ri9C8"/>
+      <column name="thead_align" sqlType="ENUM" precision="6" scale="0" nullable="true" jdbcType="1" def="J2xlZnQn" remarks="0LLRi9GA0LDQstC90LjQstCw0L3QuNC1INCyINC30LDQs9C70LDQstC40Lg="/>
+      <column name="tbody_align" sqlType="ENUM" precision="6" scale="0" nullable="true" jdbcType="1" def="J2xlZnQn" remarks="0LLRi9GA0LDQstC90LjQstCw0L3QuNC1INCyINGB0YLQvtC70LHRhtCw0YU="/>
+      <column name="max_length" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MzAw" remarks="0LrQvtC70LjRh9C10YHRgtCy0L4g0YHQuNC80LLQvtC70L7QsiDQsiDQv9C+0LvQtQ=="/>
+      <column name="default_value" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDQv9GA0Lgg0LTQvtCx0LDQstC70LXQvdC40Lgg0L3QvtCy0L7QuSDQt9Cw0L/QuNGB0LgsINC80L7QttC10YIg0LHRi9GC0Ywg0LjRgdC/0L7Qu9GM0LfQvtCy0LDQvdC+INGB0L/QtdGG0LjQsNC70YzQvdC+0LUg0LfQvdCw0YfQtdC90LjQtSBkYXRl"/>
+      <column name="additional_value" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDQvNC+0LbQtdGCINCx0YvRgtGMINGB0YLQsNGC0LjRh9C90L4g0LTQvtCx0LDQstC70LXQvdC+INC6INC30LDQv9C40YHRj9C8"/>
+      <column name="additional_option" sqlType="ENUM" precision="15" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LTQvtC/0L7Qu9C90LjRgtC10LvRjNC90YvQtSDQstC+0LfQvNC+0LbQvdC+0YHRgtC4"/>
+      <column name="required_field" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw=="/>
+      <column name="show_field_in_add" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J3llcyc="/>
+      <column name="image_height" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="group_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="image_width" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="watermark_path" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="show_empty_select_option" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="order_type" sqlType="ENUM" precision="4" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="order_field_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0J/QvtC70LUg0L/QviDQutC+0YLQvtGA0L7QvNGDINC+0YHRg9GJ0LXRgdGC0LLQu9GP0LXRgtGB0Y8g0L7RgNC00LXRgNC40L3QsyDQvNC10YDQtNC20LXQvdC+0LPQviDQv9C+0LvRjw=="/>
+      <column name="select_type" sqlType="ENUM" precision="10" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="connect_type" sqlType="ENUM" precision="4" scale="0" nullable="false" jdbcType="1" def="J21hbnkn"/>
+      <column name="in_push_statistic" sqlType="ENUM" precision="4" scale="0" nullable="false" jdbcType="1" def="J25vJw==" remarks="0LLRi9Cy0L7QtNC40YLRjCDQsiDRgdGC0LDRgtC40YHRgtC40LrQtSDQv9GD0Ygg0YDQsNGB0YHRi9C70LrQuA=="/>
+      <column name="diagram_in_push_statistic" sqlType="ENUM" precision="4" scale="0" nullable="false" jdbcType="1" def="J25vJw==" remarks="0LLRi9Cy0L7QtNC40YLRjCDQtNC40LDQs9GA0LDQvNC80YMg0LIg0YHRgtCw0YLQuNGB0YLQuNC60LUg0L/Rg9GIINGA0LDRgdGB0YvQu9C60Lg="/>
+      <column name="hierarch_position" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_10" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_52" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_11" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_53" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_12" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_54" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_52" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_53" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_55" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_58" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_57" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_2" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_10" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_11" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_12" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_3" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_15" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_13" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_23" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_22" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_21" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_20" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_19" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_18" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_17" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_16" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_14" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_24" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_4" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_25" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_26" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_27" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_28" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_29" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="field_30" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_5" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_31" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_32" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_33" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_6" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_34" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_35" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_7" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_43" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_44" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_45" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_46" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_47" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_8" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_48" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_34" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="field_1" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_4" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_9" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="active" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" def="J29uJw=="/>
+      <column name="field_51" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <column name="field_1" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_reports" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0LrQsNC60L7QuSDQv9C+0LvRjNC30L7QstCw0YLQtdC70Ywg0YHQtNC10LvQsNC7INC+0YLRh9C10YI="/>
+      <column name="view_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L3QsCDQsdCw0LfQtSDQutCw0LrQvtCz0L4g0L7RgtC+0LHRgNCw0LbQtdC90LjRjyDRgdC00LXQu9Cw0L0g0L7RgtGH0LXRgg=="/>
+      <column name="fields" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0L/QtdGA0LXRh9C10L3RjCDQv9C+0LvQtdC5INC/0L7Qv9Cw0LLRiNC40YUg0LIg0L7RgtGH0LXRgiwg0YTQvtGA0LzQsNGCOiB8MnwxMTF8"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_reports_value" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="element_ids" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0L/QtdGA0LXRh9C10L3RjCDQv9C+0LvQtdC5LCDQv9C+0L/QsNCy0YjQuNGFINCyINC+0YLRh9C10YI="/>
+      <column name="reports_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L3QvtC80LXRgCDQvtGC0YfQtdGC0LA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="view_sorting" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="condition_string" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="U1FMINC30LDQv9GA0L7RgQ=="/>
+      <column name="who_can_use" sqlType="ENUM" precision="6" scale="0" nullable="true" jdbcType="1" remarks="0LrRgtC+INC80L7QttC10YIg0L/QvtC70YzQt9C+0LLQsNGC0YzRgdGP"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="aWQg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GM"/>
+      <column name="view_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="aWQg0L7RgtC+0LHRgNCw0LbQtdC90LjRjw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="views_list" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="main_table" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="aWQg0LPQu9Cw0LLQvdC+0Lkg0YLQsNCx0LvQuNGG0YssINC90LAg0LrQvtGC0L7RgNC+0Lkg0LHQsNC30LjRgNGD0LXRgtGB0Y8g0L7RgtC+0LHRgNCw0LbQtdC90LjQtQ=="/>
+      <column name="first_window" sqlType="ENUM" precision="14" scale="0" nullable="true" jdbcType="1" def="J2dyb3VwJw==" remarks="0LrQsNC60L7QtSDQvtC60L3QviDQvtGC0L7QsdGA0LDQttC10L3QuNGPINC+0YLQutGA0YvQstCw0YLRjCDQv9C10YDQstGL0Lw="/>
+      <column name="rel_display" sqlType="ENUM" precision="6" scale="0" nullable="true" jdbcType="1" def="J3RhYmxlJw==" remarks="0L7RgtC+0LHRgNCw0LbQtdC90LjQtSDRgdCy0Y/Qt9C10Lk="/>
+      <column name="files_display" sqlType="ENUM" precision="6" scale="0" nullable="true" jdbcType="1" def="J3RhYmxlJw==" remarks="0L7RgtC+0LHRgNCw0LbQtdC90LjQtSDRhNCw0LnQu9C+0LI="/>
+      <column name="sort_field_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="aWQg0L/QvtC70Y8g0LTQu9GPINC90LDRh9Cw0LvRjNC90L7QuSDRgdC+0YDRgtC40YDQvtCy0LrQuCDRgtCw0LHQu9C40YbRiw=="/>
+      <column name="sort_type" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J2Rlc2Mn" remarks="0YLQuNC/INGB0L7RgNGC0LjRgNC+0LLQutC4"/>
+      <column name="additional_option" sqlType="ENUM" precision="7" scale="0" nullable="true" jdbcType="1" def="J25vJw==" remarks="0LTQvtC/0L7Qu9C90LjRgtC10LvRjNC90YvQtSDQstC+0LfQvNC+0LbQvdC+0YHRgtC4"/>
+      <column name="default_value" sqlType="VARCHAR" precision="250" scale="0" nullable="false" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDQv9GA0Lgg0LTQvtCx0LDQstC70LXQvdC40Lgg0L3QvtCy0L7QuSDQt9Cw0L/QuNGB0LgsINC80L7QttC10YIg0LHRi9GC0Ywg0LjRgdC/0L7Qu9GM0LfQvtCy0LDQvdC+INGB0L/QtdGG0LjQsNC70YzQvdC+0LUg0LfQvdCw0YfQtdC90LjQtSBkYXRl"/>
+      <column name="additional_value" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12" remarks="0LfQvdCw0YfQtdC90LjQtSDQvNC+0LbQtdGCINCx0YvRgtGMINGB0YLQsNGC0LjRh9C90L4g0LTQvtCx0LDQstC70LXQvdC+INC6INC30LDQv9C40YHRj9C8"/>
+      <column name="merge_field_append" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="0L/QvtGA0Y/QtNC+0Log0LTQvtCx0LDQstC70LXQvdC40Y8g0LLQviDQstGM0Y4g0LfQsNC/0LjRgdC10Lkg0LIg0LzQtdGA0LbQtdC90YvQtSDQv9C+0LvRjw=="/>
+      <column name="resize_image" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1" def="J25vJw=="/>
+      <column name="allow_edit" sqlType="ENUM" precision="6" scale="0" nullable="false" jdbcType="1" def="J2dsb2JhbCc="/>
+      <column name="allow_add_merged_data" sqlType="ENUM" precision="6" scale="0" nullable="false" jdbcType="1" def="J2dsb2JhbCc="/>
+      <column name="allow_remove_merged_data" sqlType="ENUM" precision="6" scale="0" nullable="false" jdbcType="1" def="J2dsb2JhbCc="/>
+      <column name="allow_save_template" sqlType="ENUM" precision="4" scale="0" nullable="false" jdbcType="1" def="J25vJw=="/>
+      <column name="allow_save_to_filtered" sqlType="ENUM" precision="4" scale="0" nullable="false" jdbcType="1" def="J3llcyc="/>
+      <column name="field_for_pushes" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="menu_type" sqlType="ENUM" precision="12" scale="0" nullable="true" jdbcType="1" def="J2NsYXNzaWMn" remarks="0KLQuNC/INC80LXQvdGOOiDQutC70LDRgdGB0LjRh9C10YHQutC40Lkg0LjQu9C4INC40LXRgNCw0YDRhdC40YfQtdGB0LrQuNC5"/>
+      <column name="button_create_record" sqlType="ENUM" precision="2" scale="0" nullable="true" jdbcType="1" def="JzAn" remarks="0JrQvdC+0L/QutCwINC00L7QsdCw0LLQuNGC0Ywg0LfQsNC/0LjRgdGMOiDQutC70LDRgdGB0LjRh9C10YHQutC40Lkg0LLQsNGA0LjQsNC90YIg0LjQu9C4INCyINC80LXQvdGO"/>
+      <column name="show_one_search_button" sqlType="ENUM" precision="2" scale="0" nullable="true" jdbcType="1" def="JzAn" remarks="0J7RgtC+0LHRgNCw0LbQsNGC0Ywg0L7QtNC90YMg0LrQvdC+0L/QutGDINC/0L7QuNGB0LrQsCDQsiDQvNC10L3Rjg=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="views_restriction" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0Y3RgtC+INC90LDQt9Cy0LDQvdC40LUg0Y/Qt9GL0LrQsCDQstC40LTQuNGCINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjA=="/>
+      <column name="action" sqlType="ENUM" precision="2" scale="0" nullable="true" jdbcType="1" def="Jz0n" remarks="0YLQuNC/INC+0LPRgNCw0L3QuNGH0LXQvdC40Y8="/>
+      <column name="view_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L3QsCDQutCw0LrQvtC1INC+0YLQvtCx0YDQsNC20LXQvdC40LUg0L3QsNC60LvQsNC00YvQstCw0Y7RgtGB0Y8g0L7Qs9GA0LDQvdC40YfQtdC90LjRjw=="/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="0L3QsCDRjdGC0L4g0L/QvtC70LUg0L3QsNC60LvQsNC00YvQstCw0LXRgtGB0Y8g0L7Qs9GA0LDQvdC40YfQtdC90LjQtQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="virtual_data" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" remarks="0LjQtNC10L3RgtC40YTQuNC60LDRgtC+0YAg0LfQvdCw0YfQtdC90LjRjyDRgdC+0YHRgtCw0LLQvdC+0Lkg0LjQtyBpZCDQt9Cw0L/QuNGB0Lgg0LIg0LPQu9Cw0LLQvdC+0Lkg0YLQsNCx0LvQuNGG0LUg0LggaWQg0LLQuNGA0YLRg9Cw0LvRjNC90L7Qs9C+INC/0L7Qu9GP"/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="0LfQvdCw0YfQtdC90LjQtSDRgtC10LrRg9GJ0LXQs9C+INC/0L7Qu9GP"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="virtual_file_list" schema="" catalog="eatd" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="0YLQtdC60YPRidC10LUg0L3QsNC30LLQsNC90LjQtSDRhNCw0LnQu9Cw" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" remarks="0L3QsNC30LLQsNC90LjQtSDRhNCw0LnQu9CwLCDQutC+0YLQvtGA0YvQuSDQt9Cw0LPRgNGD0LbQsNC10YLRgdGP"/>
+      <column name="type" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" remarks="0YLQuNC/INGE0LDQudC70LAsINC/0YDQuNC80LXRgDoganBn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>

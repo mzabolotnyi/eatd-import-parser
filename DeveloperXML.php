@@ -1,0 +1,54 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Max
+ * Date: 07.12.2016
+ * Time: 12:20
+ */
+
+require_once('XML.php');
+
+class DeveloperXML extends XML
+{
+    CONST FILE_NAME = 'developers.xml';
+
+    /**
+     * Prepare object $xml
+     *
+     * @param $toms
+     * @return DeveloperXML
+     */
+    public function prepare($toms)
+    {
+        $xml = new DOMDocument('1.0', 'utf-8');
+        $table = $xml->appendChild($xml->createElement('table'));
+
+        foreach ($toms as $tom) {
+            $row = $table->appendChild($xml->createElement('row'));
+            $name = $row->appendChild($xml->createElement('field_53'));
+            $name->appendChild($xml->createTextNode($tom));
+        }
+
+        $xml->formatOutput = true;
+
+        $this->xml = $xml;
+
+        return $this;
+    }
+
+    /**
+     * Save xml to temp directory and return path on success
+     *
+     * @return bool|string
+     */
+    public function save()
+    {
+        $filename = $this->getTempFilePath(self::FILE_NAME);
+
+        if ($this->xml->save($filename)) {
+            return $filename;
+        } else {
+            return false;
+        }
+    }
+}
