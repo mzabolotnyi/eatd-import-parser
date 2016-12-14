@@ -36,7 +36,8 @@ foreach ($rows as $key => $row) {
     $developerID = array_search(substr($row[4], 0, 250), $developers);
     $number = substr($row[2], 0, 250);
     $title = substr($row[3], 0, 250);
-    $image = $row[5];
+    //$image = $row[5];
+    $image = str_replace('\\','/',str_replace('D:\Ges\Out\\','',$row[5]));
 
     $document = [
         'type' => $type,
