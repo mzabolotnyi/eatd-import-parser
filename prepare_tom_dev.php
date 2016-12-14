@@ -3,6 +3,7 @@
 require_once('functions.php');
 require_once('TomXML.php');
 require_once('DeveloperXML.php');
+require_once('DocumentTypeXML.php');
 
 // break if no file in request
 if (empty($_FILES['file']['tmp_name'])) {
@@ -16,6 +17,7 @@ $rows = parse_excel_file($filename);
 // arrays for result data
 $toms = [];
 $developers = [];
+$documentTypes = [];
 
 foreach ($rows as $key => $row) {
 
@@ -26,6 +28,7 @@ foreach ($rows as $key => $row) {
 
     $tom = substr($row[1], 0, 250);
     $developer = substr($row[4], 0, 250);
+    $documentType = substr($row[0], 0, 250);
 
     if (!empty($tom) && $exist = array_search($tom, $toms) === false) {
         $toms[] = $tom;
@@ -33,6 +36,10 @@ foreach ($rows as $key => $row) {
 
     if (!empty($developer) && $exist = array_search($developer, $developers) === false) {
         $developers[] = $developer;
+    }
+
+    if (!empty($documentType) && $exist = array_search($documentType, $documentTypes) === false) {
+        $documentTypes[] = $documentType;
     }
 }
 
@@ -43,8 +50,11 @@ $tomFile = $tomXML->prepare($toms)->save();
 $developerXML = new DeveloperXML();
 $developerFile = $developerXML->prepare($developers)->save();
 
+$documentTypeXML = new DocumentTypeXML();
+$documentTypeFile = $documentTypeXML->prepare($documentTypes)->save();
+
 // pack files to archive
-$files = array($tomFile, $developerFile);
+$files = array($tomFile, $developerFile, $documentTypeFile);
 $zipName = 'files.zip';
 $zipPath = sys_get_temp_dir() . '/' . $zipName;
 $zip = new ZipArchive;

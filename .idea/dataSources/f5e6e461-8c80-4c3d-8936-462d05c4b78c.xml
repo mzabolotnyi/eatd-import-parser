@@ -1,0 +1,3225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - eatd@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="eatd">
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="admin_capabilities"/>
+    <table id="4" parent="2" name="admin_capabilities_value"/>
+    <table id="5" parent="2" name="backup_list"/>
+    <table id="6" parent="2" name="cron_mailings"/>
+    <table id="7" parent="2" name="cron_mailings_progress"/>
+    <table id="8" parent="2" name="data_1"/>
+    <table id="9" parent="2" name="data_10"/>
+    <table id="10" parent="2" name="data_11"/>
+    <table id="11" parent="2" name="data_12"/>
+    <table id="12" parent="2" name="data_2"/>
+    <table id="13" parent="2" name="data_3"/>
+    <table id="14" parent="2" name="data_4"/>
+    <table id="15" parent="2" name="data_5"/>
+    <table id="16" parent="2" name="data_6"/>
+    <table id="17" parent="2" name="data_7"/>
+    <table id="18" parent="2" name="data_8"/>
+    <table id="19" parent="2" name="data_9"/>
+    <table id="20" parent="2" name="data_connection"/>
+    <table id="21" parent="2" name="data_dictionary"/>
+    <table id="22" parent="2" name="data_garbage"/>
+    <table id="23" parent="2" name="data_list"/>
+    <table id="24" parent="2" name="data_list_name"/>
+    <table id="25" parent="2" name="data_table_list"/>
+    <table id="26" parent="2" name="data_versions"/>
+    <table id="27" parent="2" name="email"/>
+    <table id="28" parent="2" name="email_delivery"/>
+    <table id="29" parent="2" name="email_delivery_tag"/>
+    <table id="30" parent="2" name="email_link"/>
+    <table id="31" parent="2" name="email_link_click"/>
+    <table id="32" parent="2" name="email_receiver"/>
+    <table id="33" parent="2" name="email_tag"/>
+    <table id="34" parent="2" name="email_view"/>
+    <table id="35" parent="2" name="fields"/>
+    <table id="36" parent="2" name="fields_data_restriction"/>
+    <table id="37" parent="2" name="fields_data_view"/>
+    <table id="38" parent="2" name="fields_type"/>
+    <table id="39" parent="2" name="file_list"/>
+    <table id="40" parent="2" name="groups"/>
+    <table id="41" parent="2" name="language"/>
+    <table id="42" parent="2" name="list_fields"/>
+    <table id="43" parent="2" name="list_item_status"/>
+    <table id="44" parent="2" name="log_type"/>
+    <table id="45" parent="2" name="logs_1"/>
+    <table id="46" parent="2" name="mailing"/>
+    <table id="47" parent="2" name="menu"/>
+    <table id="48" parent="2" name="page"/>
+    <table id="49" parent="2" name="pass_recovery"/>
+    <table id="50" parent="2" name="phinx_versions"/>
+    <table id="51" parent="2" name="push"/>
+    <table id="52" parent="2" name="push_delivery"/>
+    <table id="53" parent="2" name="push_delivery_tag"/>
+    <table id="54" parent="2" name="push_receiver"/>
+    <table id="55" parent="2" name="push_tag"/>
+    <table id="56" parent="2" name="role_page"/>
+    <table id="57" parent="2" name="role_view"/>
+    <table id="58" parent="2" name="role_view_perm"/>
+    <table id="59" parent="2" name="roles"/>
+    <table id="60" parent="2" name="settings"/>
+    <table id="61" parent="2" name="sidebar"/>
+    <table id="62" parent="2" name="stat_info"/>
+    <table id="63" parent="2" name="stat_report_list"/>
+    <table id="64" parent="2" name="stat_reports"/>
+    <table id="65" parent="2" name="stat_users_days"/>
+    <table id="66" parent="2" name="stat_views_days"/>
+    <table id="67" parent="2" name="stat_views_fields"/>
+    <table id="68" parent="2" name="translation"/>
+    <table id="69" parent="2" name="user_default_field"/>
+    <table id="70" parent="2" name="user_fields"/>
+    <table id="71" parent="2" name="user_fields_list"/>
+    <table id="72" parent="2" name="user_fields_value"/>
+    <table id="73" parent="2" name="user_restriction"/>
+    <table id="74" parent="2" name="user_session"/>
+    <table id="75" parent="2" name="user_template_field"/>
+    <table id="76" parent="2" name="users"/>
+    <table id="77" parent="2" name="users_days"/>
+    <table id="78" parent="2" name="users_ip"/>
+    <table id="79" parent="2" name="view"/>
+    <table id="80" parent="2" name="view_10"/>
+    <table id="81" parent="2" name="view_11"/>
+    <table id="82" parent="2" name="view_12"/>
+    <table id="83" parent="2" name="view_2"/>
+    <table id="84" parent="2" name="view_3"/>
+    <table id="85" parent="2" name="view_4"/>
+    <table id="86" parent="2" name="view_5"/>
+    <table id="87" parent="2" name="view_6"/>
+    <table id="88" parent="2" name="view_7"/>
+    <table id="89" parent="2" name="view_8"/>
+    <table id="90" parent="2" name="view_9"/>
+    <table id="91" parent="2" name="view_reports"/>
+    <table id="92" parent="2" name="view_reports_value"/>
+    <table id="93" parent="2" name="view_sorting"/>
+    <table id="94" parent="2" name="views_list"/>
+    <table id="95" parent="2" name="views_restriction"/>
+    <table id="96" parent="2" name="virtual_data"/>
+    <table id="97" parent="2" name="virtual_file_list"/>
+    <column id="98" parent="3" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="99" parent="3" name="position">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="100" parent="3" name="url">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="101" parent="3" name="url_items">
+      <DataType>VARCHAR(500)|12</DataType>
+    </column>
+    <column id="102" parent="3" name="action">
+      <DataType>VARCHAR(500)|12</DataType>
+    </column>
+    <column id="103" parent="3" name="height">
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>90</DefaultExpression>
+    </column>
+    <column id="104" parent="3" name="parent">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="105" parent="3" name="icon">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="106" parent="3" name="show">
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <key id="107" parent="3" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="108" parent="4" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="109" parent="4" name="user_id">
+      <Comment>для кого доступна возможность</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="4" name="admin_capability_id">
+      <Comment>какая возможность администрирования</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="111" parent="4" name="active">
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="112" parent="4" name="active_item">
+      <DataType>VARCHAR(500)|12</DataType>
+    </column>
+    <key id="113" parent="4" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="114" parent="5" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="115" parent="5" name="time">
+      <Comment>время создания бэкапа</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="116" parent="5" name="file_name">
+      <Comment>названия файла с бэкапом</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="117" parent="5" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="118" parent="6" name="id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="119" parent="6" name="date_field">
+      <DataType>VARCHAR(32)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="6" name="email_field">
+      <DataType>VARCHAR(64)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="121" parent="6" name="table_id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="122" parent="6" name="conditions">
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="123" parent="6" name="layout_template">
+      <DataType>VARCHAR(64)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="6" name="content_template">
+      <DataType>VARCHAR(64)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="125" parent="6" name="subject">
+      <DataType>VARCHAR(256)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="126" parent="6" name="from_email">
+      <DataType>VARCHAR(128)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="6" name="from_name">
+      <DataType>VARCHAR(128)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="128" parent="6" name="active">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="129" parent="6" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="130" parent="7" name="id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="131" parent="7" name="mailing_id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="132" parent="7" name="date">
+      <DataType>DATE(10)|91</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="133" parent="7" name="sent">
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="134" parent="7" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="135" parent="8" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="136" parent="8" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="137" parent="8" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="138" parent="8" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="139" parent="8" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="140" parent="8" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="141" parent="8" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="142" parent="8" name="field_1">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="143" parent="8" name="field_2">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="144" parent="8" name="field_3">
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="145" parent="8" name="field_4">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="146" parent="8" name="field_5">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="147" parent="8" name="field_6">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="148" parent="8" name="field_7">
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="149" parent="8" name="merge_data_7">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="150" parent="8" name="field_48">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="151" parent="8" name="field_49">
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="152" parent="8" name="field_50">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <key id="153" parent="8" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="154" parent="9" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="155" parent="9" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="156" parent="9" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="157" parent="9" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="158" parent="9" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="159" parent="9" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="160" parent="9" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="161" parent="9" name="field_52">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <key id="162" parent="9" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="163" parent="10" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="164" parent="10" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="165" parent="10" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="166" parent="10" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="167" parent="10" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="168" parent="10" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="169" parent="10" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="170" parent="10" name="field_53">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <key id="171" parent="10" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="172" parent="11" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="173" parent="11" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="174" parent="11" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="175" parent="11" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="176" parent="11" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="177" parent="11" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="178" parent="11" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="179" parent="11" name="field_54">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="180" parent="11" name="field_55">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="181" parent="11" name="field_57">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="182" parent="11" name="field_58">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="183" parent="11" name="merge_data_10">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="184" parent="11" name="merge_data_11">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="185" parent="11" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="186" parent="12" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="187" parent="12" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="188" parent="12" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="189" parent="12" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="190" parent="12" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="191" parent="12" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="192" parent="12" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="193" parent="12" name="field_8">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="194" parent="12" name="field_9">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="195" parent="12" name="merge_data_1">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="196" parent="12" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="197" parent="13" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="198" parent="13" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="199" parent="13" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="200" parent="13" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="201" parent="13" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="202" parent="13" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="203" parent="13" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="204" parent="13" name="field_10">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="205" parent="13" name="field_11">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="206" parent="13" name="field_12">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="207" parent="13" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="208" parent="14" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="209" parent="14" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="210" parent="14" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="211" parent="14" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="212" parent="14" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="213" parent="14" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="214" parent="14" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="215" parent="14" name="field_13">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="216" parent="14" name="field_14">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="217" parent="14" name="field_15">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="218" parent="14" name="field_16">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="219" parent="14" name="field_17">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="220" parent="14" name="field_18">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="221" parent="14" name="field_19">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="222" parent="14" name="field_20">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="223" parent="14" name="field_21">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="224" parent="14" name="field_22">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="225" parent="14" name="field_23">
+      <DataType>VARCHAR(400)|12</DataType>
+    </column>
+    <column id="226" parent="14" name="field_24">
+      <DataType>VARCHAR(400)|12</DataType>
+    </column>
+    <key id="227" parent="14" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="228" parent="15" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="229" parent="15" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="230" parent="15" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="231" parent="15" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="232" parent="15" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="233" parent="15" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="234" parent="15" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="235" parent="15" name="field_25">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="236" parent="15" name="field_26">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="237" parent="15" name="field_27">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="238" parent="15" name="field_28">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="239" parent="15" name="field_29">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="240" parent="15" name="field_30">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="241" parent="15" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="242" parent="16" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="243" parent="16" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="244" parent="16" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="245" parent="16" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="246" parent="16" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="247" parent="16" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="248" parent="16" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="249" parent="16" name="field_31">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="250" parent="16" name="field_32">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="251" parent="16" name="field_33">
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <key id="252" parent="16" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="253" parent="17" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="254" parent="17" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="255" parent="17" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="256" parent="17" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="257" parent="17" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="258" parent="17" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="259" parent="17" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="260" parent="17" name="field_34">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="261" parent="17" name="field_35">
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <key id="262" parent="17" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="263" parent="18" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="264" parent="18" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="265" parent="18" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="266" parent="18" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="267" parent="18" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="268" parent="18" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="269" parent="18" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="270" parent="18" name="field_43">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="271" parent="18" name="field_44">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="272" parent="18" name="field_45">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="273" parent="18" name="field_46">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="274" parent="18" name="field_47">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="275" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="276" parent="19" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="277" parent="19" name="create_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="278" parent="19" name="change_date">
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="279" parent="19" name="delete">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="280" parent="19" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;off&apos;</DefaultExpression>
+    </column>
+    <column id="281" parent="19" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="282" parent="19" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="283" parent="19" name="field_51">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <key id="284" parent="19" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="285" parent="20" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="286" parent="20" name="table_from">
+      <Comment>в этой таблице есть поле объединения</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="287" parent="20" name="table_to">
+      <Comment>с этой таблицей происходит объединение</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="288" parent="20" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="289" parent="21" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="290" parent="21" name="list_id">
+      <Comment>для каких полей список, перечисленно в формате: |1|2|55| </Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="291" parent="21" name="value">
+      <Comment>значение словаря для конктретного поля</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="292" parent="21" name="multilangual">
+      <Comment>моногоязычное значение</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="293" parent="21" name="native_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="294" parent="21" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="295" parent="22" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="296" parent="22" name="user_id">
+      <Comment>кем удалено</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="297" parent="22" name="data_id">
+      <Comment>с какой таблицы</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="298" parent="22" name="data">
+      <Comment>удаленные данные</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="299" parent="22" name="date">
+      <Comment>когда удалил запись</Comment>
+      <DataType>TIMESTAMP(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="300" parent="22" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="301" parent="23" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="302" parent="23" name="value">
+      <Comment>значение списка для конктретного поля</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="303" parent="23" name="list_id">
+      <Comment>для каких полей список, перечисленно в формате: |1|2|55| </Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="304" parent="23" name="native_id">
+      <Comment>Первоначальный идентификатор значения, используется при импорте/экспорте</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="305" parent="23" name="multilangual">
+      <Comment>моногоязычное значение</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="306" parent="23" name="position">
+      <Comment>позиция значения в списке</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="307" parent="23" name="cell_status">
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="308" parent="23" name="row_status">
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="309" parent="23" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="310" parent="24" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="311" parent="24" name="title">
+      <Comment>название</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="312" parent="24" name="type">
+      <Comment>список или словарь</Comment>
+      <DataType>ENUM(10)|1</DataType>
+      <DefaultExpression>&apos;list&apos;</DefaultExpression>
+    </column>
+    <column id="313" parent="24" name="field_id">
+      <Comment>для каких полей список, перечисленно в формате: |1|2|55| </Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="314" parent="24" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="315" parent="25" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="316" parent="25" name="title">
+      <Comment>таблица для формирования навигации на сайте</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="317" parent="25" name="created">
+      <Comment>когда была создана таблица</Comment>
+      <DataType>TIMESTAMP(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="318" parent="25" name="shadow">
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <key id="319" parent="25" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="320" parent="26" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="321" parent="26" name="user_id">
+      <Comment>кем изменено</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="322" parent="26" name="page_id">
+      <Comment>какая страница</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="323" parent="26" name="field_id">
+      <Comment>какое поле</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="324" parent="26" name="data_element_id">
+      <Comment>в какой строке</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="325" parent="26" name="table_id">
+      <Comment>в какой таблице</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="326" parent="26" name="value">
+      <Comment>значение</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="327" parent="26" name="date">
+      <Comment>когда сделано изменение</Comment>
+      <DataType>TIMESTAMP(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="328" parent="26" name="status">
+      <Comment>статус изменения</Comment>
+      <DataType>ENUM(8)|1</DataType>
+      <DefaultExpression>&apos;waiting&apos;</DefaultExpression>
+    </column>
+    <key id="329" parent="26" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="330" parent="27" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="331" parent="27" name="subject">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="332" parent="27" name="message">
+      <DataType>LONGTEXT(max)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="333" parent="27" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="334" parent="28" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="335" parent="28" name="email_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="336" parent="28" name="createdAt">
+      <DataType>DATETIME(19)|93</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="337" parent="28" name="updatedAt">
+      <DataType>DATETIME(19)|93</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="338" parent="28" name="from_email">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="339" parent="28" name="from_name">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="340" parent="28" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <index id="341" parent="28" name="UNIQ_3CE7F359A832C1C9">
+      <ColNames>email_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="342" parent="28" name="IDX_3CE7F359A76ED395">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="343" parent="28" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="344" parent="28" name="FK_3CE7F359A76ED395">
+      <ColNames>user_id</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="345" parent="28" name="FK_3CE7F359A832C1C9">
+      <ColNames>email_id</ColNames>
+      <RefTableName>email</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="346" parent="29" name="email_delivery_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="347" parent="29" name="email_tag_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="348" parent="29" name="IDX_71353A744D31596">
+      <ColNames>email_delivery_id</ColNames>
+    </index>
+    <index id="349" parent="29" name="IDX_71353A74C748B0E1">
+      <ColNames>email_tag_id</ColNames>
+    </index>
+    <key id="350" parent="29" name="PRIMARY">
+      <ColNames>email_delivery_id
+email_tag_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="351" parent="29" name="FK_71353A744D31596">
+      <ColNames>email_delivery_id</ColNames>
+      <RefTableName>email_delivery</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="352" parent="29" name="FK_71353A74C748B0E1">
+      <ColNames>email_tag_id</ColNames>
+      <RefTableName>email_tag</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="353" parent="30" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="354" parent="30" name="email_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="355" parent="30" name="link">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="356" parent="30" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="357" parent="31" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="358" parent="31" name="id_email_link">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="359" parent="31" name="date">
+      <DataType>DATETIME(19)|93</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="360" parent="31" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="361" parent="32" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="362" parent="32" name="delivery_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="363" parent="32" name="email">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="364" parent="32" name="viewId">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="365" parent="32" name="rowId">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="366" parent="32" name="isDelivered">
+      <DataType>TINYINT(3)|-6</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="367" parent="32" name="IDX_36DE93DF12136921">
+      <ColNames>delivery_id</ColNames>
+    </index>
+    <key id="368" parent="32" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="369" parent="32" name="FK_36DE93DF12136921">
+      <ColNames>delivery_id</ColNames>
+      <RefTableName>email_delivery</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="370" parent="33" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="371" parent="33" name="title">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="372" parent="33" name="UNIQ_8A4D97C52B36786B">
+      <ColNames>title</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="373" parent="33" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="374" parent="34" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="375" parent="34" name="receiver_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="376" parent="34" name="created_at">
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <index id="377" parent="34" name="IDX_61CB8B0BCD53EDB6">
+      <ColNames>receiver_id</ColNames>
+    </index>
+    <key id="378" parent="34" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="379" parent="34" name="FK_61CB8B0BCD53EDB6">
+      <ColNames>receiver_id</ColNames>
+      <RefTableName>email_receiver</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="380" parent="35" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="381" parent="35" name="type_id">
+      <Comment>какого типа поле</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="382" parent="35" name="table_id">
+      <Comment>к какой таблице с данынми относится поле</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="383" parent="35" name="is_virtual">
+      <Comment>поле из данных или специально созданное под отображение</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="384" parent="35" name="shadow_field">
+      <DataType>VARCHAR(255)|12</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="385" parent="35" name="is_main_field">
+      <DataType>TINYINT(3)|-6</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <key id="386" parent="35" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="387" parent="36" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="388" parent="36" name="fields">
+      <Comment>перечень полей, которые должны подчинится условию, записываются в формате: |99|23|</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="389" parent="36" name="value">
+      <Comment>значение условия</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="390" parent="36" name="action">
+      <Comment>тип условия</Comment>
+      <DataType>ENUM(2)|1</DataType>
+      <DefaultExpression>&apos;=&apos;</DefaultExpression>
+    </column>
+    <column id="391" parent="36" name="type">
+      <Comment>показывать  или нет поля из колонки fields</Comment>
+      <DataType>ENUM(5)|1</DataType>
+      <DefaultExpression>&apos;hide&apos;</DefaultExpression>
+    </column>
+    <column id="392" parent="36" name="field_id">
+      <Comment>поле, к которому применяется условие</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="393" parent="36" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="394" parent="37" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="395" parent="37" name="value">
+      <Comment>это название языка видит пользователь</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="396" parent="37" name="action">
+      <Comment>тип ограничения</Comment>
+      <DataType>ENUM(2)|1</DataType>
+      <DefaultExpression>&apos;=&apos;</DefaultExpression>
+    </column>
+    <column id="397" parent="37" name="field_id">
+      <Comment>на это поле накладывается ограничение</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="398" parent="37" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="399" parent="38" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="400" parent="38" name="type">
+      <Comment>как называется тип поля</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="401" parent="38" name="description">
+      <Comment>как обозначается тип поля в базе</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="402" parent="38" name="position">
+      <Comment>Позиция</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="403" parent="38" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="404" parent="39" name="id">
+      <Comment>текущее название файла</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="405" parent="39" name="title">
+      <Comment>начальное название файла</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="406" parent="39" name="type">
+      <Comment>тип файла, например: jpg</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="407" parent="39" name="active">
+      <Comment>если активный - yes, если нет - view_id|row_id</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <key id="408" parent="39" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="409" parent="40" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="410" parent="40" name="view_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="411" parent="40" name="weight">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="412" parent="40" name="position">
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="413" parent="40" name="display_mode">
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+    </column>
+    <column id="414" parent="40" name="hide_name">
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="415" parent="40" name="type">
+      <DataType>TINYINT(3)|-6</DataType>
+    </column>
+    <key id="416" parent="40" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="417" parent="41" name="id">
+      <DataType>TINYINT(3)|-6</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="418" parent="41" name="lang_name">
+      <Comment>это название языка видит пользователь</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="419" parent="41" name="short_lang_name">
+      <Comment>значения поля используется как название колонки перевода в таблице translation</Comment>
+      <DataType>CHAR(2)|1</DataType>
+    </column>
+    <index id="420" parent="41" name="lang_name">
+      <ColNames>lang_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="421" parent="41" name="short_lang_name">
+      <ColNames>short_lang_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="422" parent="41" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="423" parent="42" name="id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="424" parent="42" name="field_id">
+      <Comment>идентификатор поля</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="425" parent="42" name="list_id">
+      <Comment>идентификатор списка</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="426" parent="42" name="table_id">
+      <Comment>идентификатор таблицы</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="427" parent="42" name="values">
+      <Comment>идентификаторы значений списка</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="428" parent="42" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="429" parent="43" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="430" parent="43" name="class_name">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="431" parent="43" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="432" parent="44" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="433" parent="44" name="type">
+      <Comment>тип лога</Comment>
+      <DataType>ENUM(16)|1</DataType>
+      <DefaultExpression>&apos;notice&apos;</DefaultExpression>
+    </column>
+    <key id="434" parent="44" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="435" parent="45" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="436" parent="45" name="type">
+      <Comment>типа лога указанный в таблицы log_type</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="437" parent="45" name="user">
+      <Comment>пользователь который создал лог</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="438" parent="45" name="date">
+      <Comment>дата создания лога</Comment>
+      <DataType>TIMESTAMP(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="439" parent="45" name="table">
+      <Comment>таблица над которой проводились действия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="440" parent="45" name="field">
+      <Comment>поле над которым проводились действия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="441" parent="45" name="data_element">
+      <Comment>элемент поля над которым проводились действия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="442" parent="45" name="list">
+      <Comment>список над которым проводились действия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="443" parent="45" name="view">
+      <Comment>отображение над которым проводились действия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="444" parent="45" name="page">
+      <Comment>страница над которой проводились действия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="445" parent="45" name="person">
+      <Comment>пользователь над которым проводились действия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="446" parent="45" name="role">
+      <Comment>роль над которой проводились действия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="447" parent="45" name="report">
+      <Comment>отчет над которой проводились действия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="448" parent="45" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="449" parent="46" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="450" parent="46" name="date">
+      <Comment>дата отправки письма</Comment>
+      <DataType>TIMESTAMP(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="451" parent="46" name="from">
+      <Comment>отправитель</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="452" parent="46" name="to">
+      <Comment>получатель</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="453" parent="46" name="subject">
+      <Comment>тема письма</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="454" parent="46" name="body">
+      <Comment>тело письма</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="455" parent="46" name="file">
+      <Comment>путь к прикрепленному файлу</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="456" parent="46" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="457" parent="47" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="458" parent="47" name="position">
+      <Comment>позиция в меню, сортировка ASC</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+    </column>
+    <column id="459" parent="47" name="visible">
+      <Comment>активна ли ссылка и в каком меню она отображается</Comment>
+      <DataType>ENUM(7)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="460" parent="47" name="reference">
+      <Comment>ссылка в свободном формате для перехода, используется если idElement=0</Comment>
+      <DataType>VARCHAR(150)|12</DataType>
+    </column>
+    <column id="461" parent="47" name="where">
+      <Comment>что нужно делать с значением reference: view, page ссылаются на страницу и отображение, а link просто открывает ссылку-значение</Comment>
+      <DataType>ENUM(5)|1</DataType>
+      <DefaultExpression>&apos;link&apos;</DefaultExpression>
+    </column>
+    <column id="462" parent="47" name="parent">
+      <Comment>поле для вложенных списков, применима к top и sidebar, parent указываей на id ссылки на уровень выше, parent=0 - первый уровень</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <key id="463" parent="47" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="464" parent="48" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="465" parent="48" name="title">
+      <Comment>название страницы</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="466" parent="48" name="text">
+      <Comment>текст страницы</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="467" parent="48" name="wysiwyg">
+      <Comment>включен или выключен wysiwyg для страницы</Comment>
+      <DataType>ENUM(3)|1</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="468" parent="48" name="language">
+      <Comment>язык страницы</Comment>
+      <DataType>VARCHAR(2)|12</DataType>
+    </column>
+    <column id="469" parent="48" name="main">
+      <Comment>id главной страницы</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="470" parent="48" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="471" parent="49" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="472" parent="49" name="recovery_id">
+      <Comment>id пользователя который восстонавлияввает пароль</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="473" parent="49" name="access_hash">
+      <Comment>уникальный хэш для проверки валидности ссылки восстановления пароля</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="474" parent="49" name="expires">
+      <Comment>время на протяжении которого сслыка будет валидной</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="475" parent="49" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="476" parent="50" name="version">
+      <DataType>BIGINT(19)|-5</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="477" parent="50" name="start_time">
+      <DataType>TIMESTAMP(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="478" parent="50" name="end_time">
+      <DataType>TIMESTAMP(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="479" parent="50" name="PRIMARY">
+      <ColNames>version</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="480" parent="51" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="481" parent="51" name="title">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="482" parent="51" name="text">
+      <DataType>LONGTEXT(max)|-1</DataType>
+    </column>
+    <key id="483" parent="51" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="484" parent="52" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="485" parent="52" name="push_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="486" parent="52" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="487" parent="52" name="createdAt">
+      <DataType>DATETIME(19)|93</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="488" parent="52" name="updatedAt">
+      <DataType>DATETIME(19)|93</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="489" parent="52" name="UNIQ_53D1014AF30BCAF6">
+      <ColNames>push_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="490" parent="52" name="IDX_53D1014AA76ED395">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="491" parent="52" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="492" parent="52" name="FK_53D1014AA76ED395">
+      <ColNames>user_id</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="493" parent="52" name="FK_53D1014AF30BCAF6">
+      <ColNames>push_id</ColNames>
+      <RefTableName>push</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="494" parent="53" name="push_delivery_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="495" parent="53" name="push_tag_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="496" parent="53" name="IDX_D1C888079168B231">
+      <ColNames>push_tag_id</ColNames>
+    </index>
+    <index id="497" parent="53" name="IDX_D1C88807F3831E76">
+      <ColNames>push_delivery_id</ColNames>
+    </index>
+    <key id="498" parent="53" name="PRIMARY">
+      <ColNames>push_delivery_id
+push_tag_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="499" parent="53" name="FK_D1C888079168B231">
+      <ColNames>push_tag_id</ColNames>
+      <RefTableName>push_tag</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="500" parent="53" name="FK_D1C88807F3831E76">
+      <ColNames>push_delivery_id</ColNames>
+      <RefTableName>push_delivery</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="501" parent="54" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="502" parent="54" name="delivery_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="503" parent="54" name="viewId">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="504" parent="54" name="rowId">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="505" parent="54" name="token">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="506" parent="54" name="is_opened">
+      <DataType>TINYINT(3)|-6</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="507" parent="54" name="IDX_59E861CC12136921">
+      <ColNames>delivery_id</ColNames>
+    </index>
+    <key id="508" parent="54" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="509" parent="54" name="FK_59E861CC12136921">
+      <ColNames>delivery_id</ColNames>
+      <RefTableName>push_delivery</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="510" parent="55" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="511" parent="55" name="title">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="512" parent="55" name="UNIQ_3C7083F32B36786B">
+      <ColNames>title</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="513" parent="55" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="514" parent="56" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="515" parent="56" name="edit">
+      <Comment>может ли роль редактировать страницу</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="516" parent="56" name="page_id">
+      <Comment>id страницы</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="517" parent="56" name="role_id">
+      <Comment>id роли, которая может просматривать эту страницу</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="518" parent="56" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="519" parent="57" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="520" parent="57" name="data_admin">
+      <Comment>может ли видеть изменения во вьюхе</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="521" parent="57" name="data_insert">
+      <Comment>может ли добавлять записи</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="522" parent="57" name="data_insert_confirm">
+      <Comment>должны ли его записи подвергаться модерации</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="523" parent="57" name="data_delete">
+      <Comment>может ли удалять записи</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="524" parent="57" name="data_delete_confirm">
+      <Comment>должны ли его удаления подвергаться модерации</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="525" parent="57" name="data_visible">
+      <Comment>какие записи может видеть пользователь</Comment>
+      <DataType>ENUM(9)|1</DataType>
+      <DefaultExpression>&apos;all&apos;</DefaultExpression>
+    </column>
+    <column id="526" parent="57" name="data_logs">
+      <Comment>может ли смотреть логи</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="527" parent="57" name="qrcode">
+      <Comment>использование QR кода</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="528" parent="57" name="view_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="529" parent="57" name="role_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="530" parent="57" name="can_export">
+      <DataType>TINYINT(3)|-6</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="531" parent="57" name="can_import">
+      <DataType>TINYINT(3)|-6</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="532" parent="57" name="can_send_mail">
+      <Comment>можно ли отправлять письма</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="533" parent="57" name="can_send_pushes">
+      <Comment>можно ли отправлять пуши</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <key id="534" parent="57" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="535" parent="58" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="536" parent="58" name="data_edit">
+      <Comment>может ли пользователь редактировать данные</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="537" parent="58" name="data_edit_confirm">
+      <Comment>нужна ли модерация измененных данных</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="538" parent="58" name="field_id">
+      <Comment>id поля</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="539" parent="58" name="role_view_id">
+      <Comment>к какмоу отображению относится поле</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="540" parent="58" name="data_edit_only_owner">
+      <DataType>ENUM(4)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <key id="541" parent="58" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="542" parent="59" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="543" parent="59" name="position">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="544" parent="59" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="545" parent="60" name="id">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="546" parent="60" name="value">
+      <Comment>значение настройки</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="547" parent="60" name="values">
+      <Comment>перечень доступных значений для select в формате: первое_значение^idTranslation|второе_значение^idTranslation|третье_значение^idTranslation</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="548" parent="60" name="type">
+      <Comment>тип внешнего вида настройки</Comment>
+      <DataType>ENUM(8)|1</DataType>
+    </column>
+    <column id="549" parent="60" name="hide">
+      <Comment>показывать настройку или нет</Comment>
+      <DataType>ENUM(5)|1</DataType>
+    </column>
+    <column id="550" parent="60" name="parent">
+      <Comment>к какой категории относится настройка</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <key id="551" parent="60" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="552" parent="61" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="553" parent="61" name="value">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="554" parent="61" name="type">
+      <Comment>вывести содержимое или подключить файл</Comment>
+      <DataType>ENUM(5)|1</DataType>
+      <DefaultExpression>&apos;text&apos;</DefaultExpression>
+    </column>
+    <column id="555" parent="61" name="active">
+      <Comment>в каком сайдбаре показывать элемент</Comment>
+      <DataType>ENUM(9)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="556" parent="61" name="position">
+      <DataType>TINYINT(3)|-6</DataType>
+    </column>
+    <column id="557" parent="61" name="role_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="558" parent="61" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="559" parent="62" name="id">
+      <DataType>VARCHAR(64)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="560" parent="62" name="value">
+      <Comment>значение поля</Comment>
+      <DataType>VARCHAR(64)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="561" parent="62" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="562" parent="63" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="563" parent="63" name="user_id">
+      <Comment>идентификатор пользователя создавшего отчет</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="564" parent="63" name="created">
+      <Comment>дата создания отчета</Comment>
+      <DataType>TIMESTAMP(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="565" parent="63" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="566" parent="64" name="id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="567" parent="64" name="report_id">
+      <Comment>идентификатор отчета</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="568" parent="64" name="type">
+      <Comment>тип элемента отчета</Comment>
+      <DataType>VARCHAR(128)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="569" parent="64" name="value">
+      <Comment>список значений для элемента отчета</Comment>
+      <DataType>VARCHAR(400)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="570" parent="64" name="fields">
+      <Comment>список полей для элемента отчета</Comment>
+      <DataType>VARCHAR(400)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="571" parent="64" name="group">
+      <Comment>тип группировки</Comment>
+      <DataType>VARCHAR(32)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;DAY&apos;</DefaultExpression>
+    </column>
+    <column id="572" parent="64" name="from_date">
+      <Comment>дата от которой брать данные</Comment>
+      <DataType>DATE(10)|91</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="573" parent="64" name="to_date">
+      <Comment>дата до которой брать данные</Comment>
+      <DataType>DATE(10)|91</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="574" parent="64" name="chart">
+      <Comment>наличие графика</Comment>
+      <DataType>VARCHAR(32)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="575" parent="64" name="row">
+      <Comment>линия в которой находится элемент</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="576" parent="64" name="users">
+      <Comment>разрещенные пользователи</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="577" parent="64" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="578" parent="65" name="id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="579" parent="65" name="user_id">
+      <Comment>идентификатор пользователя</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="580" parent="65" name="role_id">
+      <Comment>идентификатор роли пользователя</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="581" parent="65" name="date">
+      <Comment>дата элемента статистики</Comment>
+      <DataType>DATE(10)|91</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="582" parent="65" name="added">
+      <Comment>количество добавленых значений</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="583" parent="65" name="deleted">
+      <Comment>количество удаленных значений</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="584" parent="65" name="changed">
+      <Comment>количество измененных значений</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="585" parent="65" name="versioned">
+      <Comment>количество значений добавленых в версии</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="586" parent="65" name="searched">
+      <Comment>количество поисков</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="587" parent="65" name="looked">
+      <Comment>количество просмотров</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <key id="588" parent="65" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="589" parent="66" name="id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="590" parent="66" name="view_id">
+      <Comment>идентификатор отображения</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="591" parent="66" name="date">
+      <Comment>дата элемента статистики</Comment>
+      <DataType>DATE(10)|91</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="592" parent="66" name="added">
+      <Comment>количество добавленых значений</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="593" parent="66" name="deleted">
+      <Comment>количество удаленных значений</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="594" parent="66" name="changed">
+      <Comment>количество измененных значений</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="595" parent="66" name="versioned">
+      <Comment>количество значений добавленых в версии</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="596" parent="66" name="searched">
+      <Comment>количество поисков</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="597" parent="66" name="looked">
+      <Comment>количество просмотров</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <index id="598" parent="66" name="view_id">
+      <ColNames>view_id</ColNames>
+    </index>
+    <key id="599" parent="66" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="600" parent="67" name="id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="601" parent="67" name="view_id">
+      <Comment>идентификатор отображения</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="602" parent="67" name="field_id">
+      <Comment>идентификатор поля</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="603" parent="67" name="empty">
+      <Comment>количество пустых полей</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="604" parent="67" name="less3">
+      <Comment>количество полей до 3 символов</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="605" parent="67" name="less10">
+      <Comment>количество полей до 10 символов</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="606" parent="67" name="more10">
+      <Comment>количество полей более 10 символов</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <key id="607" parent="67" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="608" parent="68" name="id">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="609" parent="68" name="ru">
+      <Comment>перевод всех текстов на русский</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="610" parent="68" name="ua">
+      <Comment>перевод всех текстов на украинский</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="611" parent="68" name="en">
+      <Comment>перевод всех текстов на английский</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="612" parent="68" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="613" parent="69" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="614" parent="69" name="user_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="615" parent="69" name="data_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="616" parent="69" name="value">
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="617" parent="69" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="618" parent="70" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="619" parent="70" name="visible_user">
+      <Comment>видит ли пользователь поле</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="620" parent="70" name="visible_users">
+      <Comment>видят ли поле другие пользователи</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="621" parent="70" name="edit_user">
+      <Comment>права на правку поля: need - обязательно должно быть заполнено пользователем, yes - пользователь может править значение, no - только админ может править</Comment>
+      <DataType>ENUM(5)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="622" parent="70" name="type_id">
+      <Comment>какого типа поле</Comment>
+      <DataType>ENUM(5)|1</DataType>
+      <DefaultExpression>&apos;text&apos;</DefaultExpression>
+    </column>
+    <column id="623" parent="70" name="position">
+      <Comment>позиция поля</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="624" parent="70" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="625" parent="71" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="626" parent="71" name="value">
+      <Comment>значение списка</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="627" parent="71" name="user_field_id">
+      <Comment>поле, к которому относится список</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="628" parent="71" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="629" parent="72" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="630" parent="72" name="value">
+      <Comment>значение поля</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="631" parent="72" name="field_id">
+      <Comment>id поля</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="632" parent="72" name="user_id">
+      <Comment>id пользователя</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="633" parent="72" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="634" parent="73" name="id">
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="635" parent="73" name="user_id">
+      <Comment>идентификатор пользователя для которого написано условия</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="636" parent="73" name="view_id">
+      <Comment>идентификатор отображения</Comment>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="637" parent="73" name="value">
+      <Comment>значение условия</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="638" parent="73" name="action">
+      <Comment>тип условия</Comment>
+      <DataType>ENUM(8)|1</DataType>
+      <DefaultExpression>&apos;=&apos;</DefaultExpression>
+    </column>
+    <column id="639" parent="73" name="field_id">
+      <Comment>поле, к которому применяется условие</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="640" parent="73" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="641" parent="74" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="642" parent="74" name="user_id">
+      <Comment>id пользователя</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="643" parent="74" name="time">
+      <Comment>UNIX время, до которого активна сессия</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="644" parent="74" name="ip_address">
+      <Comment>ip адрес, с которого прошла аутентификация</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="645" parent="74" name="sid">
+      <Comment>ключ сессии</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <key id="646" parent="74" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="647" parent="75" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="648" parent="75" name="value">
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="649" parent="75" name="user_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="650" parent="75" name="view_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="651" parent="75" name="field_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="652" parent="75" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="653" parent="76" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="654" parent="76" name="username">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="655" parent="76" name="name">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="656" parent="76" name="email">
+      <DataType>VARCHAR(150)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="657" parent="76" name="hashed_password">
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="658" parent="76" name="role_id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="659" parent="76" name="registration_day">
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="660" parent="76" name="type">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="661" parent="76" name="language">
+      <DataType>VARCHAR(2)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="662" parent="76" name="avatar">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="663" parent="76" name="time">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="664" parent="76" name="email">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="665" parent="76" name="username">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="666" parent="76" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="667" parent="77" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="668" parent="77" name="idUser">
+      <Comment>идентификатор пользователя</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="669" parent="77" name="timeIn">
+      <Comment>количество времени онлайн</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="670" parent="77" name="pages">
+      <Comment>количество просмотренных страниц</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="671" parent="77" name="date">
+      <Comment>дата посещения</Comment>
+      <DataType>DATE(10)|91</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0001-01-01&apos;</DefaultExpression>
+    </column>
+    <column id="672" parent="77" name="idIp">
+      <Comment>идентификатор IP адреса</Comment>
+      <DataType>VARCHAR(400)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <key id="673" parent="77" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="674" parent="78" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="675" parent="78" name="idUser">
+      <Comment>идентификатор пользователя</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="676" parent="78" name="ip">
+      <Comment>IP адрес</Comment>
+      <DataType>VARCHAR(30)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="677" parent="78" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="678" parent="79" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="679" parent="79" name="view_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="680" parent="79" name="field_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="681" parent="79" name="list_position">
+      <Comment>позиция поля на странице записи</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="682" parent="79" name="search_position">
+      <Comment>позация поля в поиске</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="683" parent="79" name="table_position">
+      <Comment>позиция столбца (поля) в таблице</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="684" parent="79" name="search_visible">
+      <Comment>видно ли поле в поиске</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="685" parent="79" name="advance_search_visible">
+      <Comment>видно ли поле в расширенном поиске</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="686" parent="79" name="table_visible">
+      <Comment>видно ли поле в таблице</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="687" parent="79" name="table_ratio">
+      <Comment>ширина столбца (поля) в таблице</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>150</DefaultExpression>
+    </column>
+    <column id="688" parent="79" name="main_field">
+      <Comment>является ли поле главным</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="689" parent="79" name="thead_align">
+      <Comment>выравнивание в заглавии</Comment>
+      <DataType>ENUM(6)|1</DataType>
+      <DefaultExpression>&apos;left&apos;</DefaultExpression>
+    </column>
+    <column id="690" parent="79" name="tbody_align">
+      <Comment>выравнивание в столбцах</Comment>
+      <DataType>ENUM(6)|1</DataType>
+      <DefaultExpression>&apos;left&apos;</DefaultExpression>
+    </column>
+    <column id="691" parent="79" name="max_length">
+      <Comment>количество символов в поле</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>300</DefaultExpression>
+    </column>
+    <column id="692" parent="79" name="default_value">
+      <Comment>значение при добавлении новой записи, может быть использовано специальное значение date</Comment>
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="693" parent="79" name="additional_value">
+      <Comment>значение может быть статично добавлено к записям</Comment>
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="694" parent="79" name="additional_option">
+      <Comment>дополнительные возможности</Comment>
+      <DataType>ENUM(15)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="695" parent="79" name="required_field">
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="696" parent="79" name="show_field_in_add">
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="697" parent="79" name="image_height">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="698" parent="79" name="group_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="699" parent="79" name="image_width">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="700" parent="79" name="watermark_path">
+      <DataType>VARCHAR(255)|12</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="701" parent="79" name="show_empty_select_option">
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="702" parent="79" name="order_type">
+      <DataType>ENUM(4)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="703" parent="79" name="order_field_id">
+      <Comment>Поле по которому осуществляется ордеринг мердженого поля</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="704" parent="79" name="select_type">
+      <DataType>ENUM(10)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="705" parent="79" name="connect_type">
+      <DataType>ENUM(4)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;many&apos;</DefaultExpression>
+    </column>
+    <column id="706" parent="79" name="in_push_statistic">
+      <Comment>выводить в статистике пуш рассылки</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="707" parent="79" name="diagram_in_push_statistic">
+      <Comment>выводить диаграмму в статистике пуш рассылки</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="708" parent="79" name="hierarch_position">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <key id="709" parent="79" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="710" parent="80" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="711" parent="80" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="712" parent="80" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="713" parent="80" name="field_52">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <key id="714" parent="80" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="715" parent="81" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="716" parent="81" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="717" parent="81" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="718" parent="81" name="field_53">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <key id="719" parent="81" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="720" parent="82" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="721" parent="82" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="722" parent="82" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="723" parent="82" name="field_54">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="724" parent="82" name="field_52">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="725" parent="82" name="field_53">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="726" parent="82" name="field_55">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="727" parent="82" name="field_58">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="728" parent="82" name="field_57">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="729" parent="82" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="730" parent="83" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="731" parent="83" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="732" parent="83" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="733" parent="83" name="field_10">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="734" parent="83" name="field_11">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="735" parent="83" name="field_12">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="736" parent="83" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="737" parent="84" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="738" parent="84" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="739" parent="84" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="740" parent="84" name="field_15">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="741" parent="84" name="field_13">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="742" parent="84" name="field_23">
+      <DataType>VARCHAR(400)|12</DataType>
+    </column>
+    <column id="743" parent="84" name="field_22">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="744" parent="84" name="field_21">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="745" parent="84" name="field_20">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="746" parent="84" name="field_19">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="747" parent="84" name="field_18">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="748" parent="84" name="field_17">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="749" parent="84" name="field_16">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="750" parent="84" name="field_14">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="751" parent="84" name="field_24">
+      <DataType>VARCHAR(400)|12</DataType>
+    </column>
+    <key id="752" parent="84" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="753" parent="85" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="754" parent="85" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="755" parent="85" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="756" parent="85" name="field_25">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="757" parent="85" name="field_26">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="758" parent="85" name="field_27">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="759" parent="85" name="field_28">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="760" parent="85" name="field_29">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="761" parent="85" name="field_30">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="762" parent="85" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="763" parent="86" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="764" parent="86" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="765" parent="86" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="766" parent="86" name="field_31">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="767" parent="86" name="field_32">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="768" parent="86" name="field_33">
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <key id="769" parent="86" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="770" parent="87" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="771" parent="87" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="772" parent="87" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="773" parent="87" name="field_34">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="774" parent="87" name="field_35">
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <key id="775" parent="87" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="776" parent="88" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="777" parent="88" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="778" parent="88" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="779" parent="88" name="field_43">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="780" parent="88" name="field_44">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="781" parent="88" name="field_45">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="782" parent="88" name="field_46">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="783" parent="88" name="field_47">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="784" parent="88" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="785" parent="89" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="786" parent="89" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="787" parent="89" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="788" parent="89" name="field_48">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="789" parent="89" name="field_34">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="790" parent="89" name="field_1">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="791" parent="89" name="field_4">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="792" parent="89" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="793" parent="90" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="794" parent="90" name="user_id">
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="795" parent="90" name="active">
+      <DataType>VARCHAR(10)|12</DataType>
+      <DefaultExpression>&apos;on&apos;</DefaultExpression>
+    </column>
+    <column id="796" parent="90" name="field_51">
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="797" parent="90" name="field_1">
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="798" parent="90" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="799" parent="91" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="800" parent="91" name="user_id">
+      <Comment>какой пользователь сделал отчет</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="801" parent="91" name="view_id">
+      <Comment>на базе какого отображения сделан отчет</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="802" parent="91" name="fields">
+      <Comment>перечень полей попавших в отчет, формат: |2|111|</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="803" parent="91" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="804" parent="92" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="805" parent="92" name="element_ids">
+      <Comment>перечень полей, попавших в отчет</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="806" parent="92" name="reports_id">
+      <Comment>номер отчета</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="807" parent="92" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="808" parent="93" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="809" parent="93" name="condition_string">
+      <Comment>SQL запрос</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="810" parent="93" name="who_can_use">
+      <Comment>кто может пользоваться</Comment>
+      <DataType>ENUM(6)|1</DataType>
+    </column>
+    <column id="811" parent="93" name="user_id">
+      <Comment>id пользователь</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="812" parent="93" name="view_id">
+      <Comment>id отображения</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="813" parent="93" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="814" parent="94" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="815" parent="94" name="main_table">
+      <Comment>id главной таблицы, на которой базируется отображение</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="816" parent="94" name="first_window">
+      <Comment>какое окно отображения открывать первым</Comment>
+      <DataType>ENUM(14)|1</DataType>
+      <DefaultExpression>&apos;group&apos;</DefaultExpression>
+    </column>
+    <column id="817" parent="94" name="rel_display">
+      <Comment>отображение связей</Comment>
+      <DataType>ENUM(6)|1</DataType>
+      <DefaultExpression>&apos;table&apos;</DefaultExpression>
+    </column>
+    <column id="818" parent="94" name="files_display">
+      <Comment>отображение файлов</Comment>
+      <DataType>ENUM(6)|1</DataType>
+      <DefaultExpression>&apos;table&apos;</DefaultExpression>
+    </column>
+    <column id="819" parent="94" name="sort_field_id">
+      <Comment>id поля для начальной сортировки таблицы</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="820" parent="94" name="sort_type">
+      <Comment>тип сортировки</Comment>
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;desc&apos;</DefaultExpression>
+    </column>
+    <column id="821" parent="94" name="additional_option">
+      <Comment>дополнительные возможности</Comment>
+      <DataType>ENUM(7)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="822" parent="94" name="default_value">
+      <Comment>значение при добавлении новой записи, может быть использовано специальное значение date</Comment>
+      <DataType>VARCHAR(250)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="823" parent="94" name="additional_value">
+      <Comment>значение может быть статично добавлено к записям</Comment>
+      <DataType>VARCHAR(250)|12</DataType>
+    </column>
+    <column id="824" parent="94" name="merge_field_append">
+      <Comment>порядок добавления во вью записей в мерженые поля</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="825" parent="94" name="resize_image">
+      <DataType>ENUM(4)|1</DataType>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="826" parent="94" name="allow_edit">
+      <DataType>ENUM(6)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;global&apos;</DefaultExpression>
+    </column>
+    <column id="827" parent="94" name="allow_add_merged_data">
+      <DataType>ENUM(6)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;global&apos;</DefaultExpression>
+    </column>
+    <column id="828" parent="94" name="allow_remove_merged_data">
+      <DataType>ENUM(6)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;global&apos;</DefaultExpression>
+    </column>
+    <column id="829" parent="94" name="allow_save_template">
+      <DataType>ENUM(4)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;no&apos;</DefaultExpression>
+    </column>
+    <column id="830" parent="94" name="allow_save_to_filtered">
+      <DataType>ENUM(4)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;yes&apos;</DefaultExpression>
+    </column>
+    <column id="831" parent="94" name="field_for_pushes">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="832" parent="94" name="menu_type">
+      <Comment>Тип меню: классический или иерархический</Comment>
+      <DataType>ENUM(12)|1</DataType>
+      <DefaultExpression>&apos;classic&apos;</DefaultExpression>
+    </column>
+    <column id="833" parent="94" name="button_create_record">
+      <Comment>Кнопка добавить запись: классический вариант или в меню</Comment>
+      <DataType>ENUM(2)|1</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="834" parent="94" name="show_one_search_button">
+      <Comment>Отображать одну кнопку поиска в меню</Comment>
+      <DataType>ENUM(2)|1</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="835" parent="94" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="836" parent="95" name="id">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="837" parent="95" name="value">
+      <Comment>это название языка видит пользователь</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="838" parent="95" name="action">
+      <Comment>тип ограничения</Comment>
+      <DataType>ENUM(2)|1</DataType>
+      <DefaultExpression>&apos;=&apos;</DefaultExpression>
+    </column>
+    <column id="839" parent="95" name="view_id">
+      <Comment>на какое отображение накладываются ограничения</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="840" parent="95" name="field_id">
+      <Comment>на это поле накладывается ограничение</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="841" parent="95" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="842" parent="96" name="id">
+      <Comment>идентификатор значения составной из id записи в главной таблице и id виртуального поля</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="843" parent="96" name="value">
+      <Comment>значение текущего поля</Comment>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <key id="844" parent="96" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="845" parent="97" name="id">
+      <Comment>текущее название файла</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="846" parent="97" name="title">
+      <Comment>название файла, который загружается</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="847" parent="97" name="type">
+      <Comment>тип файла, пример: jpg</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <key id="848" parent="97" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
